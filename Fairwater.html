@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html = style="height: 100%;">
+  <head>
+    <title>Engines of Fury Interactive Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scripts/leaflet.css">
+	 <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+	  <link href="carousel.css" rel="stylesheet">
+	  <link type="image/x-icon" rel="shortcut icon" href="icons/favicon.ico">
+    <script src="scripts/leaflet.js"></script>
+	<script src="scripts/random.js"></script>
+	<script type="text/javascript" src="scripts/markers.js"></script>
+	<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(96989374, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96989374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	
+  </head>
+  
+  <body style="height: 100%;margin: 0;">
+  
+	<nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-sm-start fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto" href="https://lrmap.fun/"
+          >EoF</a
+        >
+        <button class="navbar-toggler align-self-start" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse bg-dark p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav align-self-stretch">
+
+		  
+            <li class="nav-item active">
+              <a class="nav-link" href="./Cliffside"
+                >Cliffside</a
+              >
+            </li>
+			
+			<li class="nav-item active">
+              <a class="nav-link" href="./Fairwater"
+                >Fairwater</a
+              >
+            </li>
+			
+			<li class="nav-item active">
+              <a class="nav-link" href="./Recycling"
+                >Recycling</a
+              >
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  
+    <div id="map" style="width: 100%; height: 100%; background: #161616;"></div>
+    <script type="text/javascript">
+    var map = L.map('map').setView([0, 0], 0);
+    L.tileLayer('Fairwater/{z}/{x}/{y}.png', {
+      continuousWorld: false,
+      noWrap: true,  
+      minZoom: 3,
+      maxZoom: 5,
+    }).addTo(map);
+	    
+	
+	var Boss = L.icon({
+		iconUrl:       'icons/Boss.png',
+		iconRetinaUrl: 'icons/Boss.png',
+		iconSize:    [60, 60],
+		iconAnchor:  [20, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	var Council_caches = L.icon({
+		iconUrl:       'icons/Council_caches.png',
+		iconRetinaUrl: 'icons/Council_caches.png',
+		iconSize:    [50, 40],
+		iconAnchor:  [12, 20],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+		
+	var el_Boss1 = L.marker([35.424868, -52.998047], {icon: Boss}).bindPopup('<b>Random Boss:<br>Juggernaut / Scorpion Monarch</b>'),
+		el_Boss2 = L.marker([59.243415, 4.658203], {icon: Boss}).bindPopup('<b>Random Boss:<br>Juggernaut / Scorpion Monarch</b>');
+	
+	var el_Council_caches1 = L.marker([-18.104087, 10.942383], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches2 = L.marker([-15.496032, -2.373047], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches3 = L.marker([-3.030812, -14.72168], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches4 = L.marker([-8.885072, -31.420898], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches5 = L.marker([4.127285, -45.703125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches6 = L.marker([31.578535, -42.1875], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+		el_Council_caches7 = L.marker([28.960089, -26.455078], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches9 = L.marker([51.096623, -39.682617], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches10 = L.marker([56.776808, -37.133789], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches11 = L.marker([56.824933, -9.316406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches13 = L.marker([47.249407, -2.548828], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches14 = L.marker([60.500525, 5.317383], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches15 = L.marker([47.901614, 17.138672], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches16 = L.marker([51.536086, 26.850586], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches17 = L.marker([43.771094, 47.021484], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches18 = L.marker([33.358062, 21.181641], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches19 = L.marker([26.234302, 27.773438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches20 = L.marker([23.80545, 20.566406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches21 = L.marker([16.762468, 14.106445], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches22 = L.marker([47.398349, 56.469727], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+	
+	
+	
+	var mg_Boss_all = L.layerGroup([el_Boss1,el_Boss2]).addTo(map);
+	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22]).addTo(map);
+	
+	var overlays={ 
+		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
+		"<img src='icons/Boss_menu.png' /> Boss" : mg_Boss_all,
+		}
+
+	L.control.layers(null, overlays).addTo(map);
+	
+	</script>
+	<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+      integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04="
+      crossorigin="anonymous"
+    ></script>
+	<script src="./js/script.js"></script>
+  </body>
+</html>
