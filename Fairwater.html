@@ -104,6 +104,15 @@
 		popupAnchor: [1, -34],
 		tooltipAnchor: [16, -28],
 	});
+
+	var Exit = L.icon({
+		iconUrl:       'icons/exit.png',
+		iconRetinaUrl: 'icons/exit.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
 	
 		
 	var el_Boss1 = L.marker([35.424868, -52.998047], {icon: Boss}).bindPopup('<b>Random Boss:<br>Juggernaut / Scorpion Monarch</b>'),
@@ -129,15 +138,28 @@
 		el_Council_caches20 = L.marker([23.80545, 20.566406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches21 = L.marker([16.762468, 14.106445], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches22 = L.marker([47.398349, 56.469727], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+
+
+	var el_Exit1 = L.marker([-42.455888, 7.119141], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit2 = L.marker([-31.203405, 37.045898], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit3 = L.marker([-51.727028, 8.173828], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit4 = L.marker([-63.134503, 20.083008], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit5 = L.marker([-29.954935, 29.399414], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit6 = L.marker([-59.756395, 8.4375], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit7 = L.marker([-60.866312, 14.282227], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit8 = L.marker([-57.397624, -10.59082], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
+		el_Exit9 = L.marker([-20.179724, -26.938477], {icon: Exit}).bindPopup('<b>Evacuation point</b>');
 	
 	
 	
 	var mg_Boss_all = L.layerGroup([el_Boss1,el_Boss2]).addTo(map);
 	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22]).addTo(map);
-	
+	var mg_Exit_all = L.layerGroup([el_Exit1,el_Exit2,el_Exit3,el_Exit4,el_Exit5,el_Exit6,el_Exit7,el_Exit8,el_Exit9]).addTo(map);
+		
 	var overlays={ 
 		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
 		"<img src='icons/Boss_menu.png' /> Boss" : mg_Boss_all,
+		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
 		}
 
 	L.control.layers(null, overlays).addTo(map);
