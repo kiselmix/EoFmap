@@ -105,20 +105,32 @@
 		tooltipAnchor: [16, -28],
 	});
 	
+	var ExitOn = L.icon({
+		iconUrl:       'icons/exit_on.png',
+		iconRetinaUrl: 'icons/exit_on.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	
+	var ExitOff = L.icon({
+		iconUrl:       'icons/exit_off.png',
+		iconRetinaUrl: 'icons/exit_off.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	
+	
 	var Bridge = L.icon({
 		iconUrl:       'icons/Bridge.png',
 		iconRetinaUrl: 'icons/Bridge.png',
 		iconSize:    [32, 44],
 		iconAnchor:  [12, 41],
-		popupAnchor: [1, -34],
-		tooltipAnchor: [16, -28],
-	});
-
-	var Exit = L.icon({
-		iconUrl:       'icons/exit.png',
-		iconRetinaUrl: 'icons/exit.png',
-		iconSize:    [30, 30],
-		iconAnchor:  [20, 25],
 		popupAnchor: [1, -34],
 		tooltipAnchor: [16, -28],
 	});
@@ -163,39 +175,52 @@
 		el_Bridge3 = L.marker([-59.534318, -7.734375], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
 		el_Bridge4 = L.marker([-38.754083, 80.15625], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
 		el_Bridge5 = L.marker([-31.203405, 104.414063], {icon: Bridge}).bindPopup('<b>Appears randomly</b>');
+	
+	
+	var el_Exit1 = L.marker([-63.509375, 66.708984], {icon: ExitOff}),
+		el_Exit2 = L.marker([-17.224758, 48.955078], {icon: ExitOff}),
+		el_Exit3 = L.marker([40.111689, 48.339844], {icon: ExitOff}),
+		el_Exit4 = L.marker([-44.21371, 113.90625], {icon: ExitOff}),
+		el_Exit5 = L.marker([-37.71859, 104.326172], {icon: ExitOff}),
+		el_Exit6 = L.marker([-11.350797, 82.177734], {icon: ExitOff}),
+		el_Exit7 = L.marker([49.267805, 81.386719], {icon: ExitOff}),
+		el_Exit8 = L.marker([59.800634, 64.248047], {icon: ExitOff}),
+		el_Exit9 = L.marker([9.275622, -93.779297], {icon: ExitOff}),
+		el_Exit10 = L.marker([-67.776025, -21.357422], {icon: ExitOff}),
+		el_Exit11 = L.marker([28.921631, 77.080078], {icon: ExitOff}),
+		el_Exit12 = L.marker([70.844673, -19.863281], {icon: ExitOff}),
+		el_Exit13 = L.marker([61.856149, -24.433594], {icon: ExitOff}),
+		el_Exit14 = L.marker([-67.373698, -64.951172], {icon: ExitOff}),
+		el_Exit15 = L.marker([-73.252045, 106.787109], {icon: ExitOff}),
+		el_Exit16 = L.marker([-24.766785, 12.304688], {icon: ExitOff}),
+		el_Exit17 = L.marker([-69.131271, -2.988281], {icon: ExitOff}),
+		el_Exit18 = L.marker([6.577303, 58.447266], {icon: ExitOff}),
+		el_Exit19 = L.marker([-73.971078, -47.8125], {icon: ExitOff}),
+		el_Exit20 = L.marker([-66.089364, -44.121094], {icon: ExitOff}),
+		el_Exit21 = L.marker([-35.746512, -28.476562], {icon: ExitOff}),
+		el_Exit22 = L.marker([6.577303, 79.716797], {icon: ExitOff}),
+		el_Exit23 = L.marker([-70.757966, -14.677734], {icon: ExitOff}),
+		el_Exit24 = L.marker([-72.100944, 85.341797], {icon: ExitOff}),
+		el_Exit25 = L.marker([63.154355, -71.367188], {icon: ExitOff});
+		
+	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9, el_Exit10,el_Exit11, el_Exit12, el_Exit13, el_Exit14, el_Exit15, el_Exit16, el_Exit17, el_Exit18, el_Exit19, el_Exit20,el_Exit21, el_Exit22, el_Exit23, el_Exit24, el_Exit25];
 
-
-	var el_Exit1 = L.marker([-63.509375, 66.708984], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit2 = L.marker([-17.224758, 48.955078], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit3 = L.marker([40.111689, 48.339844], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit4 = L.marker([-44.21371, 113.90625], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit5 = L.marker([-37.71859, 104.326172], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit6 = L.marker([-11.350797, 82.177734], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit7 = L.marker([49.267805, 81.386719], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit8 = L.marker([59.800634, 64.248047], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit9 = L.marker([9.275622, -93.779297], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit10 = L.marker([-67.776025, -21.357422], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit11 = L.marker([28.921631, 77.080078], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit12 = L.marker([70.844673, -19.863281], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit13 = L.marker([61.856149, -24.433594], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit14 = L.marker([-67.373698, -64.951172], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit15 = L.marker([-73.252045, 106.787109], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit16 = L.marker([-24.766785, 12.304688], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit17 = L.marker([-69.131271, -2.988281], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit18 = L.marker([6.577303, 58.447266], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit19 = L.marker([-73.971078, -47.8125], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit20 = L.marker([-66.089364, -44.121094], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit21 = L.marker([-35.746512, -28.476562], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit22 = L.marker([6.577303, 79.716797], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit23 = L.marker([-70.757966, -14.677734], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit24 = L.marker([-72.100944, 85.341797], {icon: Exit}).bindPopup('<b>Evacuation point</b>'),
-		el_Exit25 = L.marker([63.154355, -71.367188], {icon: Exit}).bindPopup('<b>Evacuation point</b>');
+		exitMarkers.forEach(function(marker) {
+		  marker.on('click', function() {
+			if (marker.options.icon === ExitOff) {
+			  marker.setIcon(ExitOn);
+			} else {
+			  marker.setIcon(ExitOff);
+			}
+		  });
+		});
 	
 	
 	var mg_Boss_all = L.layerGroup([el_Boss1]).addTo(map);
 	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22,el_Council_caches23,el_Council_caches24,el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,el_Council_caches29,el_Council_caches30,el_Council_caches31,el_Council_caches32,el_Council_caches33]).addTo(map);
 	var mg_Bridge_all = L.layerGroup([el_Bridge1,el_Bridge2,el_Bridge3,el_Bridge4,el_Bridge5]).addTo(map);
-	var mg_Exit_all = L.layerGroup([el_Exit1,el_Exit2,el_Exit3,el_Exit4,el_Exit5,el_Exit6,el_Exit7,el_Exit8,el_Exit9,el_Exit10,el_Exit11,el_Exit12,el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25]).addTo(map);
+	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
+	
 	
 	var overlays={ 
 		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
@@ -205,6 +230,7 @@
 		}
 
 	L.control.layers(null, overlays).addTo(map);
+
 	
 	</script>
 	<script
