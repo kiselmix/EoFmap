@@ -1,12 +1,34 @@
 .itemBox {
-  position: relative; /* для позиционирования цифры относительно контейнера */
-  display: inline-block; /* или другой подходящий способ отображения */
+  position: relative; 
+  display: inline-block; 
 }
 
 .itemBox img {
   display: block;
-  width: 100%; /* или нужный размер */
+  width: 100%; 
   height: auto;
+}
+
+/* Изменяем цвет кнопки "Select a Material" */
+#dropdownMenuButton {
+	text-decoration: none;
+	color: #000000;
+	background-color: #ff6b35;
+	border: 2px solid #e55a2b;
+	background: #FF9900;
+	padding: 0 6px;
+	font-size: inherit;
+	font-size: 24px;
+}
+
+#dropdownMenuButton:hover {
+  color: #FF9900; /* Темнее при наведении */
+  background-color: rgba(255, 107, 53, 0.1); /* Легкий оранжевый фон при наведении */
+}
+
+#dropdownMenuButton:focus {
+  outline: 2px solid #ff6b35; /* Фокус для accessibility */
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25); /* Легкая тень при фокусе */
 }
 
 .centered-number {
