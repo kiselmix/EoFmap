@@ -83,7 +83,7 @@
       </div>
     </nav>
   
-    <div id="map" style="width: 100%; height: 100%; background: #161616;"></div>
+   <div id="map" style="width: 100%; height: 100%; background: #161616;"></div>
     <script type="text/javascript">
     var map = L.map('map').setView([0, 0], 0);
     L.tileLayer('Fairwater/{z}/{x}/{y}.png', {
@@ -131,6 +131,15 @@
 		tooltipAnchor: [16, -28],
 	});
 	
+	var Quest = L.icon({
+		iconUrl:       'icons/Quest.png',
+		iconRetinaUrl: 'icons/Quest.png',
+		iconSize:    [15, 15],
+		iconAnchor:  [5, 10],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
 		
 	var el_Boss1 = L.marker([35.424868, -52.998047], {icon: Boss}).bindPopup('<b>Random Boss</b>'),
 		el_Boss2 = L.marker([59.243415, 4.658203], {icon: Boss}).bindPopup('<b>Random Boss</b>');
@@ -154,7 +163,14 @@
 		el_Council_caches19 = L.marker([26.234302, 27.773438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches20 = L.marker([23.80545, 20.566406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches21 = L.marker([16.762468, 14.106445], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
-		el_Council_caches22 = L.marker([47.398349, 56.469727], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+		el_Council_caches22 = L.marker([47.398349, 56.469727], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches23 = L.marker([26.588527, -54.580078], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches24 = L.marker([-18.062312, -22.148438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches25 = L.marker([1.318243, -39.155273], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches26 = L.marker([15.623037, -71.586914], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches27 = L.marker([25.165173, -60.952148], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches28 = L.marker([2.943041, -60.864258], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches29 = L.marker([2.943041, -60.864258], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
 		
 	var el_Exit1 = L.marker([-42.455888, 7.119141], {icon: ExitOff}),
 		el_Exit2 = L.marker([-31.203405, 37.045898], {icon: ExitOff}),
@@ -164,9 +180,24 @@
 		el_Exit6 = L.marker([-59.756395, 8.4375], {icon: ExitOff}),
 		el_Exit7 = L.marker([-60.866312, 14.282227], {icon: ExitOff}),
 		el_Exit8 = L.marker([-57.397624, -10.59082], {icon: ExitOff}),
-		el_Exit9 = L.marker([-20.179724, -26.938477], {icon: ExitOff});
+		el_Exit9 = L.marker([-20.179724, -26.938477], {icon: ExitOff}),
+		el_Exit10 = L.marker([-53.748711, 47.197266], {icon: ExitOff}),
+		el_Exit11 = L.marker([-21.698265, 2.8125], {icon: ExitOff}),
+		el_Exit12 = L.marker([-27.293689, 2.460938], {icon: ExitOff}),
+		el_Exit13 = L.marker([-51.234407, 40.341797], {icon: ExitOff}),
+		el_Exit14 = L.marker([22.350076, 11.425781], {icon: ExitOff}),
+		el_Exit15 = L.marker([15.538376, -6.152344], {icon: ExitOff}),
+		el_Exit16 = L.marker([3.513421, -65.654297], {icon: ExitOff}),
+		el_Exit17 = L.marker([29.075375, -29.179688], {icon: ExitOff}),
+		el_Exit18 = L.marker([31.353637, 36.914063], {icon: ExitOff}),
+		el_Exit19 = L.marker([9.622414, 43.59375], {icon: ExitOff});
+		
+	var el_Quest1 = L.marker([61.100789, 4.394531], {icon: Quest}).bindPopup('<b>Quest "New Horizons"<br>Visit the northernmost point. Be careful with the boss.</b>').addTo(map),
+		el_Quest2 = L.marker([-11.609193, -67.631836], {icon: Quest}).bindPopup('<b>Quest "To The Rhythm Of The Beat"<br>Inspect the table with vinyl records</b>').addTo(map),
+		el_Quest3 = L.marker([20.385825, 33.354492], {icon: Quest}).bindPopup('<b>Quest "The Sacred Scrawl"<br>Search the bookcase</b>').addTo(map);
 	
-	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9];
+	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9,el_Exit10,el_Exit11,el_Exit12,el_Exit9,
+	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19];
 
 		exitMarkers.forEach(function(marker) {
 		  marker.on('click', function() {
@@ -181,7 +212,11 @@
 	
 	
 	var mg_Boss_all = L.layerGroup([el_Boss1,el_Boss2]).addTo(map);
-	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22]).addTo(map);
+	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,
+	el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,
+	el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,
+	el_Council_caches22,el_Council_caches23,el_Council_caches24,el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,
+	el_Council_caches29]).addTo(map);
 	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
 	
 	var overlays={ 
@@ -206,6 +241,4 @@
 	<script src="./js/script.js"></script>
   </body>
 </html>
-
-
 
