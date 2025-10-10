@@ -142,6 +142,15 @@
 		tooltipAnchor: [16, -28],
 	});
 	
+	var Quest = L.icon({
+		iconUrl:       'icons/Quest.png',
+		iconRetinaUrl: 'icons/Quest.png',
+		iconSize:    [15, 15],
+		iconAnchor:  [5, 10],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
 		
 	var el_Boss1 = L.marker([74.116047, -98.789063], {icon: Boss}).bindPopup('<b>Random Boss:<br>Juggernaut / Scorpion Monarch</b>');
 	
@@ -175,13 +184,29 @@
 		el_Council_caches30 = L.marker([76.496311, -45.878906], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches31 = L.marker([74.259738, -78.046875], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches32 = L.marker([73.922469, -103.359375], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
-		el_Council_caches33 = L.marker([77.273855, -62.578125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+		el_Council_caches33 = L.marker([77.273855, -62.578125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches34 = L.marker([11.609193, -48.339844], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches35 = L.marker([36.738884, -42.714844], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches36 = L.marker([72.919635, 0.703125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches37 = L.marker([8.667918, 11.865234], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches38 = L.marker([0.35156, -0.439453], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches39 = L.marker([-32.546813, -34.453125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches41 = L.marker([57.136239, -52.646484], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches43 = L.marker([70.407348, 87.802734], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches44 = L.marker([49.21042, 56.425781], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches45 = L.marker([57.984808, 34.013672], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches46 = L.marker([57.468589, -100.634766], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches47 = L.marker([25.562265, -94.570313], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches48 = L.marker([66.791909, -99.84375], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches49 = L.marker([17.811456, -112.148438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches50 = L.marker([67.875541, 20.917969], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
 	
-	var el_Bridge1 = L.marker([-57.231503, -28.564453], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
-		el_Bridge2 = L.marker([-51.179343, -58.095703], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
-		el_Bridge3 = L.marker([-59.534318, -7.734375], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
-		el_Bridge4 = L.marker([-38.754083, 80.15625], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
-		el_Bridge5 = L.marker([-31.203405, 104.414063], {icon: Bridge}).bindPopup('<b>Appears randomly</b>');
+	var el_Bridge1 = L.marker([-64.014496, -94.570313], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
+		el_Bridge2 = L.marker([-53.592505, -46.142578], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
+		el_Bridge3 = L.marker([-58.859224, -7.03125], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
+		el_Bridge4 = L.marker([-59.400365, 25.839844], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
+		el_Bridge5 = L.marker([-38.754083, 80.15625], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
+		el_Bridge6 = L.marker([-31.203405, 104.414063], {icon: Bridge}).bindPopup('<b>Appears randomly</b>');
 	
 	
 	var el_Exit1 = L.marker([-63.509375, 66.708984], {icon: ExitOff}),
@@ -208,9 +233,20 @@
 		el_Exit22 = L.marker([6.577303, 79.716797], {icon: ExitOff}),
 		el_Exit23 = L.marker([-70.757966, -14.677734], {icon: ExitOff}),
 		el_Exit24 = L.marker([-72.100944, 85.341797], {icon: ExitOff}),
-		el_Exit25 = L.marker([63.154355, -71.367188], {icon: ExitOff});
+		el_Exit25 = L.marker([63.154355, -71.367188], {icon: ExitOff}),
+		el_Exit26 = L.marker([-1.230374, -13.359375], {icon: ExitOff}),
+		el_Exit27 = L.marker([36.456636, -53.964844], {icon: ExitOff}),
+		el_Exit28 = L.marker([42.682435, -30.058594], {icon: ExitOff}),
+		el_Exit29 = L.marker([6.664608, -85.078125], {icon: ExitOff}),
+		el_Exit30 = L.marker([42.682435, -107.402344], {icon: ExitOff}),
+		el_Exit31 = L.marker([1.757537, 37.96875], {icon: ExitOff}),
+		el_Exit32 = L.marker([63.233627, 49.570313], {icon: ExitOff});
 		
-	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9, el_Exit10,el_Exit11, el_Exit12, el_Exit13, el_Exit14, el_Exit15, el_Exit16, el_Exit17, el_Exit18, el_Exit19, el_Exit20,el_Exit21, el_Exit22, el_Exit23, el_Exit24, el_Exit25];
+	var el_Quest1 = L.marker([45.95115, -14.941406], {icon: Quest}).bindPopup('<b>Quest "One Mans Treasure"</b>').addTo(map);
+		
+	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9, el_Exit10,el_Exit11, el_Exit12, 
+	el_Exit13, el_Exit14, el_Exit15, el_Exit16, el_Exit17, el_Exit18, el_Exit19, el_Exit20,el_Exit21, el_Exit22, el_Exit23, el_Exit24, el_Exit25,
+	el_Exit26,el_Exit27,el_Exit28,el_Exit29,el_Exit30,el_Exit31,el_Exit32];
 
 		exitMarkers.forEach(function(marker) {
 		  marker.on('click', function() {
@@ -224,16 +260,22 @@
 	
 	
 	var mg_Boss_all = L.layerGroup([el_Boss1]).addTo(map);
-	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22,el_Council_caches23,el_Council_caches24,el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,el_Council_caches29,el_Council_caches30,el_Council_caches31,el_Council_caches32,el_Council_caches33]).addTo(map);
-	var mg_Bridge_all = L.layerGroup([el_Bridge1,el_Bridge2,el_Bridge3,el_Bridge4,el_Bridge5]).addTo(map);
+	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,el_Council_caches6,
+	el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,el_Council_caches15,el_Council_caches16,
+	el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,el_Council_caches22,el_Council_caches23,el_Council_caches24,
+	el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,el_Council_caches29,el_Council_caches30,el_Council_caches31,el_Council_caches32,
+	el_Council_caches33,el_Council_caches34,el_Council_caches35,el_Council_caches36,el_Council_caches37,el_Council_caches38,el_Council_caches39,
+	el_Council_caches41,el_Council_caches43,el_Council_caches44,el_Council_caches45,el_Council_caches46,el_Council_caches47,el_Council_caches48,
+	el_Council_caches49,el_Council_caches50,]).addTo(map);
+	var mg_Bridge_all = L.layerGroup([el_Bridge1,el_Bridge2,el_Bridge3,el_Bridge4,el_Bridge5,el_Bridge6]).addTo(map);
 	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
 	
 	
 	var overlays={ 
 		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
 		"<img src='icons/Boss_menu.png' /> Boss" : mg_Boss_all,
-		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
 		"<img src='icons/Bridge_menu.png' /> Bridge" : mg_Bridge_all,
+		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
 		}
 
 	L.control.layers(null, overlays).addTo(map);
@@ -253,7 +295,5 @@
 	<script src="./js/script.js"></script>
   </body>
 </html>
-
-
 
 
