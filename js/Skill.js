@@ -418,7 +418,7 @@ nodes.forEach(node => {
         if (!node.active) {
             const activeCount = nodes.filter(n => n.active).length;
             if (activeCount >= 21) {
-                alert('Максимум 20 активированных узлов достигнут!');
+                alert('Maximum number of skills activated!');
                 return;
             }
             if (!canReachStart(node.id)) {
