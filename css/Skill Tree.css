@@ -1,0 +1,14 @@
+
+ body { background: #1a1a1a; color: white; margin: 0;}
+        svg { border: 1px solid #333; background: #0d0d0d; cursor: grab; }
+        svg:active { cursor: grabbing; }
+        .node { cursor: pointer;} /* Для неактивных */
+        .node:hover { opacity: 1; }
+        .node.active { opacity: 1; filter: brightness(1.2); } /* Эффект для активных */
+        .link { stroke: #666; stroke-width: 2;}
+        .link.active { stroke: #FF5722; stroke-width: 3; }
+        text { font-size: 10px; fill: white; pointer-events: none; text-anchor: middle; }
+		
+		.tooltip {
+	position: absolute; display: none; background: rgba(0, 0, 0, 0.8); color: white; padding: 8px; border-radius: 5px; font-size: 14px; pointer-events: none; z-index: 1000; }
+
