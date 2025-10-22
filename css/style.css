@@ -32,4 +32,63 @@
     z-index: 1029;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+	#calculateBtn {
+        text-decoration: none;
+		color: #000000;
+		background-color: #ff6b35;
+		border: 2px solid #e55a2b;
+		background: #FF9900;
+		padding: 4px 6px;
+		font-size: 20px;
+		border-radius: 5px;
+    }
+
+    #calculateBtn:hover {
+        background-color: #f06b35;
+    }
+
+input[type="number"] {
+        background-color: #f0f0f0;
+        border: 2px solid #cccccc;
+        border-radius: 5px;
+        padding: 2px;
+        font-size: 16px;
+        width: 100px;
+        text-align: center;
+        transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus {
+        border-color: #999999;
+        outline: none;
+    }
+	
+	label {
+    margin-bottom: 10px; /* Увеличенные отступы между строками (label) */
+    
+}
+
+
+
+#statCalculator {
+    display: flex; /* Располагает дочерние блоки параллельно */
+    gap: 20px; /* Отступ между блоками (20px) */
+    align-items: flex-start; /* Выравнивает блоки по верхнему краю */
+}
+
+/* Стили для дочерних блоков (опционально, для лучшего вида) */
+#calculatorInputs, #finalStats {
+    flex: 1; /* Каждый блок занимает равное пространство */
+    padding: 10px; /* Небольшой внутренний отступ для воздуха */
+    border: 1px solid #ddd; /* Лёгкая рамка для разделения (опционально, можно убрать) */
+    
+}
+
+#baseCritChance, #baseCritDamage {
+    display: none; /* Скрывает поля ввода */
+}
+
+label[for="baseCritChance"], label[for="baseCritDamage"] {
+    display: none; /* Скрывает метки */
+}
