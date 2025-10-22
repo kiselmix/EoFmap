@@ -1,78 +1,78 @@
 const data = {
             nodes: [
                 {id: 1, x: 100, y: 50, color: 'green', active: true, image: 'skill/start.png', description: 'The initial core is always active'},
-                {id: 2, x: 100, y: 150, color: 'red', active: false, image: 'skill/1.png'},
-                {id: 3, x: 100, y: 250, color: 'blue', active: false, image: 'skill/6.png'},
-                {id: 4, x: -50, y: 300, color: 'purple', active: false, image: 'skill/6.png'},
-                {id: 5, x: 50, y: 400, color: 'orange', active: false, image: 'skill/9.png'},
-                {id: 6, x: 0, y: 170, color: 'yellow', active: false, image: 'skill/30.png'},
-                {id: 7, x: 200, y: 170, color: 'yellow', active: false, image: 'skill/6.png'},
-                {id: 8, x: 300, y: 150, color: 'yellow', active: false, image: 'skill/18.png'},
-                {id: 9, x: 175, y: 325, color: 'blue', active: false, image: 'skill/6.png'},
-                {id: 10, x: 350, y: 225, color: 'yellow', active: false, image: 'skill/29.png'},
-                {id: 11, x: 275, y: 250, color: 'yellow', active: false, image: 'skill/23.png'},
-                {id: 12, x: 375, y: 400, color: 'yellow', active: false, image: 'skill/6.png'},
-                {id: 13, x: 325, y: 500, color: 'yellow', active: false, image: 'skill/8.png'},
-                {id: 14, x: 200, y: 600, color: 'yellow', active: false, image: 'skill/7.png'},
-                {id: 15, x: 100, y: 650, color: 'yellow', active: false, image: 'skill/26.png'},
-                {id: 16, x: 0, y: 600, color: 'yellow', active: false, image: 'skill/6.png'},
-                {id: 17, x: 100, y: 525, color: 'yellow', active: false, image: 'skill/17.png'},
-                {id: 18, x: -125, y: 500, color: 'yellow', active: false, image: 'skill/18.png'},
-                {id: 19, x: -175, y: 400, color: 'yellow', active: false, image: 'skill/8.png'},
-                {id: 20, x: -100, y: 150, color: 'yellow', active: false, image: 'skill/16.png'},
-                {id: 21, x: -100, y: 50, color: 'green', active: false, image: 'skill/4.png'},
-                {id: 22, x: -150, y: 250, color: 'yellow', active: false, image: 'skill/12.png'},
-                {id: 23, x: -275, y: 400, color: 'yellow', active: false, image: 'skill/36.png'},
-                {id: 24, x: -275, y: 300, color: 'purple', active: false, image: 'skill/6.png'},
-                {id: 25, x: -375, y: 300, color: 'purple', active: false, image: 'skill/5.png'},
-                {id: 26, x: -425, y: 375, color: 'purple', active: false, image: 'skill/25.png'},
-                {id: 27, x: -300, y: 200, color: 'purple', active: false, image: 'skill/4.png'},
-                {id: 28, x: -225, y: 150, color: 'purple', active: false, image: 'skill/7.png'},
-                {id: 29, x: -225, y: 50, color: 'purple', active: false, image: 'skill/15.png'},
-                {id: 100, x: 200, y: 0, color: 'cyan', active: false, image: 'skill/3.png'},
-                {id: 101, x: 300, y: 50, color: 'yellow', active: false, image: 'skill/34.png'},
-                {id: 102, x: 200, y: -100, color: 'cyan', active: false, image: 'skill/22.png'},
-                {id: 103, x: 375, y: -50, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 104, x: 375, y: -150, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 105, x: 450, y: 25, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 106, x: 450, y: 125, color: 'yellow', active: false, image: 'skill/21.png'},
-                {id: 107, x: 525, y: -75, color: 'yellow', active: false, image: 'skill/24.png'},
-                {id: 108, x: 600, y: 25, color: 'yellow', active: false, image: 'skill/27.png'},
-                {id: 109, x: 700, y: -75, color: 'yellow', active: false, image: 'skill/30.png'},
-                {id: 110, x: 725, y: -175, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 111, x: 750, y: -325, color: 'yellow', active: false, image: 'skill/28.png'},
-                {id: 112, x: 650, y: -400, color: 'yellow', active: false, image: 'skill/27.png'},
-                {id: 113, x: 650, y: -275, color: 'yellow', active: false, image: 'skill/33.png'},
-                {id: 114, x: 500, y: -450, color: 'yellow', active: false, image: 'skill/12.png'},
-                {id: 115, x: 350, y: -400, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 116, x: 650, y: 125, color: 'yellow', active: false, image: 'skill/31.png'},
-                {id: 117, x: 550, y: 175, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 118, x: 475, y: 275, color: 'yellow', active: false, image: 'skill/6.png'},
-                {id: 119, x: 600, y: 275, color: 'yellow', active: false, image: 'skill/12.png'},
-                {id: 120, x: 675, y: 325, color: 'yellow', active: false, image: 'skill/35.png'},
-                {id: 200, x: 0, y: 0, color: 'yellow', active: false, image: 'skill/2.png'},
-                {id: 201, x: 0, y: -100, color: 'yellow', active: false, image: 'skill/5.png'},
-                {id: 202, x: 100, y: -175, color: 'yellow', active: false, image: 'skill/32.png'},
-                {id: 203, x: -100, y: -150, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 204, x: -175, y: -100, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 205, x: -100, y: -250, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 206, x: -200, y: -250, color: 'yellow', active: false, image: 'skill/13.png'},
-                {id: 207, x: 25, y: -275, color: 'yellow', active: false, image: 'skill/5.png'},
-                {id: 208, x: 175, y: -275, color: 'yellow', active: false, image: 'skill/29.png'},
-                {id: 209, x: 25, y: -375, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 210, x: 175, y: -375, color: 'yellow', active: false, image: 'skill/22.png'},
-                {id: 211, x: 100, y: -475, color: 'yellow', active: false, image: 'skill/21.png'},
-                {id: 212, x: 100, y: -575, color: 'yellow', active: false, image: 'skill/20.png'},
-                {id: 213, x: -50, y: -475, color: 'yellow', active: false, image: 'skill/19.png'},
-                {id: 214, x: -150, y: -375, color: 'yellow', active: false, image: 'skill/18.png'},
-                {id: 215, x: -300, y: -450, color: 'yellow', active: false, image: 'skill/5.png'},
-                {id: 216, x: -450, y: -400, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 217, x: -450, y: -275, color: 'yellow', active: false, image: 'skill/10.png'},
-                {id: 218, x: -550, y: -325, color: 'yellow', active: false, image: 'skill/11.png'},
-                {id: 219, x: -525, y: -175, color: 'yellow', active: false, image: 'skill/12.png'},
-                {id: 220, x: -475, y: -50, color: 'yellow', active: false, image: 'skill/5.png'},
-                {id: 221, x: -375, y: 100, color: 'yellow', active: false, image: 'skill/4.png'},
-                {id: 222, x: 250, y: -225, color: 'yellow', active: false, image: 'skill/14.png'},
+                {id: 2, x: 100, y: 150, color: 'red', active: false, image: 'skill/1.png', video: './skill/videoplayback.mp4', description: 'Slowing Area <br>ACTIVE ABILITY <br>Cooldown: 155 <br>Cost: 18 energy <br>Status Effect: Slowed Movement (15) <br>A cloud appears around the player current position. Enemies in the cloud are slowed down. Duration 7s.'},
+                {id: 3, x: 100, y: 250, color: 'blue', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 4, x: -50, y: 300, color: 'purple', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 5, x: 50, y: 400, color: 'orange', active: false, image: 'skill/9.png', video: './skill/videoplayback.mp4', description: 'Explosion Sequence <br>ACTIVE ABILITY <br>Cooldown: 175 <br>Cost: 22 energy <br>AOE Damage: 214 Physical <br>An explosion appear near the player and triggers a chain of explosions towards a cursor position. Each explosion is bigger than the last one and deals AoE damage. A total of 6 explosions gets triggered.'},
+                {id: 6, x: 0, y: 170, color: 'yellow', active: false, image: 'skill/30.png', description: 'Increase weapon accuracy +8'},
+                {id: 7, x: 200, y: 170, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 8, x: 300, y: 150, color: 'yellow', active: false, image: 'skill/18.png', description: 'Increases weapon attack speed -10%'},
+                {id: 9, x: 175, y: 325, color: 'blue', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 10, x: 350, y: 225, color: 'yellow', active: false, image: 'skill/29.png', description: 'Decreases energy cost required to cast an ability -5%'},
+                {id: 11, x: 275, y: 250, color: 'yellow', active: false, image: 'skill/23.png', video: './skill/videoplayback.mp4', description: 'Tesla Coil <br>ACTIVE ABILITY <br>Cooldown: 225 <br>Cost: 35 energy <br>Projectile Damage: 427 Physical <br>Status Effect: Stun (0,8s) <br>Short wind-up. The character cannot move/turn while wind-upping. Fires a fast moving narrow tesla coil projectile. Tesla Coil pierces all targets in a line. Targets receive lots of DMG + stun debuff.'},
+                {id: 12, x: 375, y: 400, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 13, x: 325, y: 500, color: 'yellow', active: false, image: 'skill/8.png', description: 'Increases dodge chance +3%'},
+                {id: 14, x: 200, y: 600, color: 'yellow', active: false, image: 'skill/7.png', description: 'Increase the amount of damage dealt on critical strike +15%'},
+                {id: 15, x: 100, y: 650, color: 'yellow', active: false, image: 'skill/26.png', description: 'Accuracy penalty while moving is reduced by -50%'},
+                {id: 16, x: 0, y: 600, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 17, x: 100, y: 525, color: 'yellow', active: false, image: 'skill/17.png', video: './skill/videoplayback.mp4', description: 'Rapid Fire <br>ACTIVE ABILITY <br>Cooldown: 155 <br>Cost: 50 energy <br>Projectile Damage: 54 Physical <br>Launches multiple bullets into the cursor position. Characters hit with the bullet get Physical DMG.'},
+                {id: 18, x: -125, y: 500, color: 'yellow', active: false, image: 'skill/18.png', description: 'Increases weapon attack speed -10%'},
+                {id: 19, x: -175, y: 400, color: 'yellow', active: false, image: 'skill/8.png', description: 'Increases dodge chance +3%'},
+                {id: 20, x: -100, y: 150, color: 'yellow', active: false, image: 'skill/16.png', description: 'Increase critical strike chance +5%'},
+                {id: 21, x: -100, y: 50, color: 'green', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 22, x: -150, y: 250, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
+                {id: 23, x: -275, y: 400, color: 'yellow', active: false, image: 'skill/36.png', description: '+10% crit chance when not moving.'},
+                {id: 24, x: -275, y: 300, color: 'purple', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 25, x: -375, y: 300, color: 'purple', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
+                {id: 26, x: -425, y: 375, color: 'purple', active: false, image: 'skill/25.png', description: 'Increases weapon attack speed by +5%. <br>Increases physical damage dealt by +5%. <br>Increases armor by +5%.'},
+                {id: 27, x: -300, y: 200, color: 'purple', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 28, x: -225, y: 150, color: 'purple', active: false, image: 'skill/7.png', description: 'Increase the amount of damage dealt on critical strike +15%'},
+                {id: 29, x: -225, y: 50, color: 'purple', active: false, image: 'skill/15.png', video: './skill/videoplayback.mp4', description: 'Sludge <br>ACTIVE ABILITY <br>Cooldown: 175 <br>Cost: 18 energy AoE Damage: 22 Physical <br>Status Effect: Slowed Movement (15)<br>Launches a ballistic projectile to a cursor position. After hitting the ground, the projectile explodes and creates a toxic puddle. Enemies in the puddle receive small damage over time and their movement is slightly slowed down.'},
+                {id: 100, x: 200, y: 0, color: 'cyan', active: false, image: 'skill/3.png', video: './skill/videoplayback.mp4', description: 'Ball Lightning <br>ACTIVE ABILITY <br>Cooldown: 155 <br>Cost: 35 energy <br>AOE Damage: 222 Physical <br>The player casts a ball of lightning that goes straight to the cursor position and explodes after x meters or when it hits a wall.'},
+                {id: 101, x: 300, y: 50, color: 'yellow', active: false, image: 'skill/34.png', description: 'Increases energy capacity +10'},
+                {id: 102, x: 200, y: -100, color: 'cyan', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 103, x: 375, y: -50, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 104, x: 375, y: -150, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 105, x: 450, y: 25, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 106, x: 450, y: 125, color: 'yellow', active: false, image: 'skill/21.png', description: 'Decreases abilities cooldown  -5%'},
+                {id: 107, x: 525, y: -75, color: 'yellow', active: false, image: 'skill/24.png', video: './skill/videoplayback.mp4' , description: 'Slow Cluster <br>ACTIVE ABILITY <br>Cooldown: 145 <br>Cost: 15 energy <br>AoE Damage: 189 Physical <br>Status Effect: SlowedMovement (75) <br>Launches ballistic projectile to the cursor position. Upon hitting the ground, the projectile explodes slowing down enemies, and spreads into 12 little shards 360 degrees radius around the explosion (shards travel in straight trajectories). An enemy hit by a shard is also slowed down.'},
+                {id: 108, x: 600, y: 25, color: 'yellow', active: false, image: 'skill/27.png', description: 'Increases shield capacity +2'},
+                {id: 109, x: 700, y: -75, color: 'yellow', active: false, image: 'skill/30.png', description: 'Increase weapon accuracy +8'},
+                {id: 110, x: 725, y: -175, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 111, x: 750, y: -325, color: 'yellow', active: false, image: 'skill/28.png', description: 'Deal 10% more physical damage when shield is full.'},
+                {id: 112, x: 650, y: -400, color: 'yellow', active: false, image: 'skill/27.png', description: 'Increases shield capacity +2'},
+                {id: 113, x: 650, y: -275, color: 'yellow', active: false, image: 'skill/33.png', video: './skill/videoplayback.mp4', description: 'Rocket Shower <br>ACTIVE ABILITY <br>Cooldown: 355 <br>Cost: 45 energy <br>AOE Damage: 111 Physical <br>Launches multiple rockets that deal damage in a large circular area (8m radius). Lasts around 4s.'},
+                {id: 114, x: 500, y: -450, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
+                {id: 115, x: 350, y: -400, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 116, x: 650, y: 125, color: 'yellow', active: false, image: 'skill/31.png', description: 'When health drops below 20%, ability cooldown is reduced by -40%.'},
+                {id: 117, x: 550, y: 175, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 118, x: 475, y: 275, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
+                {id: 119, x: 600, y: 275, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
+                {id: 120, x: 675, y: 325, color: 'yellow', active: false, image: 'skill/35.png', description: 'Increases dodge chance by +5. <br>Increases energy capacity by +5%. <br>Increases critical strike chance by +5%.'},
+                {id: 200, x: 0, y: 0, color: 'yellow', active: false, image: 'skill/2.png', video: './skill/videoplayback.mp4', description: 'Grenade <br>ACTIVE ABILITY <br>Cooldown: 125 <br>Cost: 25 energy <br>AoE Damage: 171 Physical <br>Launches a ballistic grenade into the cursors position. Upon hitting the ground, the grenade explodes dealing damage to enemies.'},
+                {id: 201, x: 0, y: -100, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
+                {id: 202, x: 100, y: -175, color: 'yellow', active: false, image: 'skill/32.png', description: 'Increases maximum health +80'},
+                {id: 203, x: -100, y: -150, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 204, x: -175, y: -100, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 205, x: -100, y: -250, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 206, x: -200, y: -250, color: 'yellow', active: false, image: 'skill/13.png', video: './skill/videoplayback.mp4' , description: 'Concussion Grenade <br>ACTIVE ABILITY <br>Cooldown: 115 <br>Cost: 18 energy <br>Status Effect: Stun (1,3s) <br>Launches a ballistic grenade. Upon hitting the ground, the grenade explodes stunning all enemies that stand in the explosion area.'},
+                {id: 207, x: 25, y: -275, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
+                {id: 208, x: 175, y: -275, color: 'yellow', active: false, image: 'skill/29.png', description: 'Decreases energy cost required to cast an ability -5%'},
+                {id: 209, x: 25, y: -375, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 210, x: 175, y: -375, color: 'yellow', active: false, image: 'skill/22.png', description: 'Increases energy capacity by +6. <br>Reduces player ability cooldown by -2%.'},
+                {id: 211, x: 100, y: -475, color: 'yellow', active: false, image: 'skill/21.png', description: 'Decreases abilities cooldown  -5%'},
+                {id: 212, x: 100, y: -575, color: 'yellow', active: false, image: 'skill/20.png', description: 'Increases shield capacity by +5. <br>Increases health by +5%. <br>Reduces energy cost by -5%.'},
+                {id: 213, x: -50, y: -475, color: 'yellow', active: false, image: 'skill/19.png', description: 'When health drops to 20% or below, damage dealt increases by +20%'},
+                {id: 214, x: -150, y: -375, color: 'yellow', active: false, image: 'skill/18.png', description: 'Increases weapon attack speed -10%'},
+                {id: 215, x: -300, y: -450, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
+                {id: 216, x: -450, y: -400, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 217, x: -450, y: -275, color: 'yellow', active: false, image: 'skill/10.png', video: './skill/videoplayback.mp4', description: 'Lava Ball <br>ACTIVE ABILITY <br>Cooldown: 185 <br>Cost: 55 energy <br>AoE Damage: 452 Physical <br>Launches a ballistic lava ball to the cursor position. Lava ball explosion deals AoE damage and creates 6 mini lava shards that shoot into the nearby ground and create small lava puddles. Lava puddles deal damage over time.'},
+                {id: 218, x: -550, y: -325, color: 'yellow', active: false, image: 'skill/11.png', description: 'Gain +10% damage when energy is full.'},
+                {id: 219, x: -525, y: -175, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
+                {id: 220, x: -475, y: -50, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
+                {id: 221, x: -375, y: 100, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
+                {id: 222, x: 250, y: -225, color: 'yellow', active: false, image: 'skill/14.png', video: './skill/videoplayback.mp4', description: 'Detonating Bugs <br>ACTIVE ABILITY <br>Cooldown: 275 <br>Cost: 31 energy <br>Spawn 6 detonating bugs that follow enemies. If a bug is near the enemy or if the 12s cooldown passes, detonating bug explodes dealing damage to the nearby enemies.'},
             ],
             links: [
                 {from: 1, to: 2},
@@ -433,22 +433,30 @@ nodes.forEach(node => {
         console.log(`"${node.label}" ${node.active ? 'активирован' : 'деактивирован'}`);
     });
     
-    // Новые обработчики для tooltip
-    img.addEventListener('mouseover', () => {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.textContent = node.description || 'Description coming soon'; // Используем описание узла или заглушку
-        tooltip.style.display = 'block';
-    });
-    
-    img.addEventListener('mousemove', (e) => {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.left = `${e.pageX + 10}px`; // Позиция чуть правее и ниже курсора
-        tooltip.style.top = `${e.pageY + 10}px`;
-    });
-    
-    img.addEventListener('mouseout', () => {
-        document.getElementById('tooltip').style.display = 'none';
-    });
+// Новые обработчики для tooltip с автопроигрыванием только для "Старт"
+img.addEventListener('mouseover', () => {
+    const tooltip = document.getElementById('tooltip');
+    let content = node.description || 'Описание скоро появится';
+    if (node.video) {
+        content = `<video src="${node.video}" autoplay muted loop width="200" height="150" type="video/mp4" onerror="console.error('Ошибка загрузки видео:', this.error); this.style.display='none';"></video><br>${content}`;
+    }
+    tooltip.innerHTML = content;
+    tooltip.style.display = 'block';
+});
+
+img.addEventListener('mousemove', (e) => {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.style.left = `${e.pageX + 10}px`; // Позиция чуть правее и ниже курсора
+    tooltip.style.top = `${e.pageY + 10}px`;
+});
+
+img.addEventListener('mouseout', () => {
+    const tooltip = document.getElementById('tooltip');
+    const video = tooltip.querySelector('video');  // Находим видео в tooltip
+    if (video) video.pause();  // Останавливаем видео при уходе курсора
+    tooltip.style.display = 'none';
+});
+
     
     nodeGroup.appendChild(img);
     
@@ -486,3 +494,112 @@ nodes.forEach(node => {
                 line.classList.toggle('active', fromActive);
             });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Обновленная функция enforceReachability с вызовом updateStatCalculator
+function enforceReachability() {
+    // Сначала деактивируем недостижимые активные узлы (кроме "Старт")
+    nodes.forEach(node => {
+        if (node.id !== 1 && node.active && !canReachStart(node.id)) {
+            node.active = false;
+            const img = treeGroup.querySelector(`image[data-id="${node.id}"]`);
+            if (img) img.classList.remove('active');
+        }
+    });
+    
+    // Теперь обновляем видимость рамки для ВСЕХ узлов на основе их состояния активации
+    nodes.forEach(node => {
+        const outline = treeGroup.querySelector(`rect[data-id="${node.id}"]`);
+        if (outline) {
+            outline.style.display = node.active ? 'block' : 'none';
+        }
+    });
+    
+    updateLinks();
+    updateStatCalculator(); // Обновляем калькулятор после изменений
+    updateActiveSkillsPanel(); // Если у вас есть панель активных навыков
+}
+
+// Функция обновления калькулятора статов
+function updateStatCalculator() {
+    // Получаем базовые значения из input'ов
+    const baseHealth = parseFloat(document.getElementById('baseHealth').value) || 0;
+    const baseDodge = parseFloat(document.getElementById('baseDodge').value) || 0;
+    const baseDefense = parseFloat(document.getElementById('baseDefense').value) || 0;
+    const baseDamage = parseFloat(document.getElementById('baseDamage').value) || 0;
+
+    // Суммируем бонусы из активных узлов без видео
+    let bonusHealthAbs = 0, bonusHealthPerc = 0;
+    let bonusDodgeAbs = 0, bonusDodgePerc = 0;
+    let bonusDefensePerc = 0;
+    let bonusDamagePerc = 0;
+
+    nodes.filter(n => n.active && !n.video).forEach(node => {
+        const desc = node.description.toLowerCase();
+        // Health: +90, +80, +5%
+        if (desc.includes('increases health by +')) {
+            const match = desc.match(/increases health by \+(\d+)(%)?/);
+            if (match) {
+                if (match[2] === '%') bonusHealthPerc += parseFloat(match[1]);
+                else bonusHealthAbs += parseFloat(match[1]);
+            }
+        } else if (desc.includes('increases maximum health +')) {
+            const match = desc.match(/increases maximum health \+(\d+)/);
+            if (match) bonusHealthAbs += parseFloat(match[1]);
+        }
+        // Dodge: +3%, +5, +5%
+        if (desc.includes('increases dodge chance')) {
+            const match = desc.match(/increases dodge chance \+(\d+)(%)?/);
+            if (match) {
+                if (match[2] === '%') bonusDodgePerc += parseFloat(match[1]);
+                else bonusDodgeAbs += parseFloat(match[1]);
+            }
+        }
+        // Defense: +3%, +5%
+        if (desc.includes('increases armor')) {
+            const match = desc.match(/increases armor \+(\d+)%/);
+            if (match) bonusDefensePerc += parseFloat(match[1]);
+        }
+        // Damage: +3%, +5%, +10%
+        if (desc.includes('increases physical damage dealt')) {
+            const match = desc.match(/increases physical damage dealt \+(\d+)%/);
+            if (match) bonusDamagePerc += parseFloat(match[1]);
+        } else if (desc.includes('deal 10% more physical damage')) {
+            bonusDamagePerc += 10;
+        } else if (desc.includes('gain +10% damage when energy is full')) {
+            bonusDamagePerc += 10; // Условный, но суммируем как процент
+        }
+    });
+
+    // Рассчитываем итоговые значения
+    const totalHealth = baseHealth + bonusHealthAbs + (baseHealth * bonusHealthPerc / 100);
+    const totalDodge = baseDodge + bonusDodgeAbs + (baseDodge * bonusDodgePerc / 100);
+    const totalDefense = baseDefense + (baseDefense * bonusDefensePerc / 100);
+    const totalDamage = baseDamage + (baseDamage * bonusDamagePerc / 100);
+
+    // Обновляем итоговые поля
+    document.getElementById('totalHealth').value = totalHealth.toFixed(1);
+    document.getElementById('totalDodge').value = totalDodge.toFixed(1);
+    document.getElementById('totalDefense').value = totalDefense.toFixed(1);
+    document.getElementById('totalDamage').value = totalDamage.toFixed(1);
+}
+
+// Добавляем слушатели на базовые input'ы для пересчета
+document.getElementById('baseHealth').addEventListener('input', updateStatCalculator);
+document.getElementById('baseDodge').addEventListener('input', updateStatCalculator);
+document.getElementById('baseDefense').addEventListener('input', updateStatCalculator);
+document.getElementById('baseDamage').addEventListener('input', updateStatCalculator);
+
+// Инициализация калькулятора при загрузке
+updateStatCalculator();
