@@ -604,7 +604,7 @@ img.addEventListener('mouseover', () => {
     const tooltip = document.getElementById('tooltip');
     let content = node.description || 'Описание скоро появится';
     if (node.video) {
-        content = `<video src="${node.video}" autoplay muted loop width="200" height="150" type="video/mp4" onerror="console.error('Ошибка загрузки видео:', this.error); this.style.display='none';"></video><br>${content}`;
+        content = `<video src="${node.video}" autoplay muted loop width="400" height="300" type="video/mp4" onerror="console.error('Ошибка загрузки видео:', this.error); this.style.display='none';"></video><br>${content}`;
     }
     tooltip.innerHTML = content;
     tooltip.style.display = 'block';
