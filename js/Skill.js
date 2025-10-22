@@ -4,7 +4,7 @@ const data = {
                 {id: 2, x: 100, y: 150, color: 'red', active: false, image: 'skill/1.png', video: './skill/videoplayback.mp4', description: 'Slowing Area <br>ACTIVE ABILITY <br>Cooldown: 155 <br>Cost: 18 energy <br>Status Effect: Slowed Movement (15) <br>A cloud appears around the player current position. Enemies in the cloud are slowed down. Duration 7s.'},
                 {id: 3, x: 100, y: 250, color: 'blue', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
                 {id: 4, x: -50, y: 300, color: 'purple', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
-                {id: 5, x: 50, y: 400, color: 'orange', active: false, image: 'skill/9.png', video: './skill/videoplayback.mp4', description: 'Explosion Sequence <br>ACTIVE ABILITY <br>Cooldown: 175 <br>Cost: 22 energy <br>AOE Damage: 214 Physical <br>An explosion appear near the player and triggers a chain of explosions towards a cursor position. Each explosion is bigger than the last one and deals AoE damage. A total of 6 explosions gets triggered.'},
+                {id: 5, x: 50, y: 400, color: 'orange', active: false, image: 'skill/9.png', video: './skill/Explosion Sequence.mp4', description: 'Explosion Sequence <br>ACTIVE ABILITY <br>Cooldown: 175 <br>Cost: 22 energy <br>AOE Damage: 214 Physical <br>An explosion appear near the player and triggers a chain of explosions towards a cursor position. Each explosion is bigger than the last one and deals AoE damage. A total of 6 explosions gets triggered.'},
                 {id: 6, x: 0, y: 170, color: 'yellow', active: false, image: 'skill/30.png', description: 'Increase weapon accuracy +8'},
                 {id: 7, x: 200, y: 170, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
                 {id: 8, x: 300, y: 150, color: 'yellow', active: false, image: 'skill/18.png', description: 'Increases weapon attack speed -10%'},
@@ -50,7 +50,7 @@ const data = {
                 {id: 118, x: 475, y: 275, color: 'yellow', active: false, image: 'skill/6.png', description: 'Increases critical damage chance by +3%. <br>Reduces weapon spray while moving - 3%.'},
                 {id: 119, x: 600, y: 275, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
                 {id: 120, x: 675, y: 325, color: 'yellow', active: false, image: 'skill/35.png', description: 'Increases dodge chance by +5. <br>Increases energy capacity by +5%. <br>Increases critical strike chance by +5%.'},
-                {id: 200, x: 0, y: 0, color: 'yellow', active: false, image: 'skill/2.png', video: './skill/videoplayback.mp4', description: 'Grenade <br>ACTIVE ABILITY <br>Cooldown: 125 <br>Cost: 25 energy <br>AoE Damage: 171 Physical <br>Launches a ballistic grenade into the cursors position. Upon hitting the ground, the grenade explodes dealing damage to enemies.'},
+                {id: 200, x: 0, y: 0, color: 'yellow', active: false, image: 'skill/2.png', video: './skill/Grenade.mp4', description: 'Grenade <br>ACTIVE ABILITY <br>Cooldown: 125 <br>Cost: 25 energy <br>AoE Damage: 171 Physical <br>Launches a ballistic grenade into the cursors position. Upon hitting the ground, the grenade explodes dealing damage to enemies.'},
                 {id: 201, x: 0, y: -100, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
                 {id: 202, x: 100, y: -175, color: 'yellow', active: false, image: 'skill/32.png', description: 'Increases maximum health +80'},
                 {id: 203, x: -100, y: -150, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
@@ -67,7 +67,7 @@ const data = {
                 {id: 214, x: -150, y: -375, color: 'yellow', active: false, image: 'skill/18.png', description: 'Increases weapon attack speed -10%'},
                 {id: 215, x: -300, y: -450, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
                 {id: 216, x: -450, y: -400, color: 'yellow', active: false, image: 'skill/4.png', description: 'Increases health by +90 <br>Increases maximum carry weight by +3'},
-                {id: 217, x: -450, y: -275, color: 'yellow', active: false, image: 'skill/10.png', video: './skill/videoplayback.mp4', description: 'Lava Ball <br>ACTIVE ABILITY <br>Cooldown: 185 <br>Cost: 55 energy <br>AoE Damage: 452 Physical <br>Launches a ballistic lava ball to the cursor position. Lava ball explosion deals AoE damage and creates 6 mini lava shards that shoot into the nearby ground and create small lava puddles. Lava puddles deal damage over time.'},
+                {id: 217, x: -450, y: -275, color: 'yellow', active: false, image: 'skill/10.png', video: './skill/Lava Ball.mp4', description: 'Lava Ball <br>ACTIVE ABILITY <br>Cooldown: 185 <br>Cost: 55 energy <br>AoE Damage: 452 Physical <br>Launches a ballistic lava ball to the cursor position. Lava ball explosion deals AoE damage and creates 6 mini lava shards that shoot into the nearby ground and create small lava puddles. Lava puddles deal damage over time.'},
                 {id: 218, x: -550, y: -325, color: 'yellow', active: false, image: 'skill/11.png', description: 'Gain +10% damage when energy is full.'},
                 {id: 219, x: -525, y: -175, color: 'yellow', active: false, image: 'skill/12.png', description: 'Increases physical damage dealt +3%'},
                 {id: 220, x: -475, y: -50, color: 'yellow', active: false, image: 'skill/5.png', description: 'Increases armor +3%'},
@@ -438,7 +438,7 @@ img.addEventListener('mouseover', () => {
     const tooltip = document.getElementById('tooltip');
     let content = node.description || 'Описание скоро появится';
     if (node.video) {
-        content = `<video src="${node.video}" autoplay muted loop width="200" height="150" type="video/mp4" onerror="console.error('Ошибка загрузки видео:', this.error); this.style.display='none';"></video><br>${content}`;
+        content = `<video src="${node.video}" autoplay muted loop width="400" height="300" type="video/mp4" onerror="console.error('Ошибка загрузки видео:', this.error); this.style.display='none';"></video><br>${content}`;
     }
     tooltip.innerHTML = content;
     tooltip.style.display = 'block';
@@ -487,119 +487,156 @@ img.addEventListener('mouseout', () => {
     
 
         function updateLinks() {
-            const linkElements = treeGroup.querySelectorAll('.link');
-            linkElements.forEach((line, i) => {
-                const link = links[i];
-                const fromActive = nodes.find(n => n.id === link.from).active;
-                line.classList.toggle('active', fromActive);
-            });
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Обновленная функция enforceReachability с вызовом updateStatCalculator
-function enforceReachability() {
-    // Сначала деактивируем недостижимые активные узлы (кроме "Старт")
-    nodes.forEach(node => {
-        if (node.id !== 1 && node.active && !canReachStart(node.id)) {
-            node.active = false;
-            const img = treeGroup.querySelector(`image[data-id="${node.id}"]`);
-            if (img) img.classList.remove('active');
+    const lines = treeGroup.querySelectorAll('.link');
+    lines.forEach((line, i) => {
+        const link = links[i];
+        const fromNode = nodes.find(n => n.id === link.from);
+        const toNode = nodes.find(n => n.id === link.to);
+        if (fromNode && toNode) {
+            line.classList.toggle('active', fromNode.active);
         }
     });
-    
-    // Теперь обновляем видимость рамки для ВСЕХ узлов на основе их состояния активации
-    nodes.forEach(node => {
-        const outline = treeGroup.querySelector(`rect[data-id="${node.id}"]`);
-        if (outline) {
-            outline.style.display = node.active ? 'block' : 'none';
-        }
-    });
-    
-    updateLinks();
-    updateStatCalculator(); // Обновляем калькулятор после изменений
-    updateActiveSkillsPanel(); // Если у вас есть панель активных навыков
 }
 
-// Функция обновления калькулятора статов
-function updateStatCalculator() {
-    // Получаем базовые значения из input'ов
+const bonuses = {
+    3: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    4: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    6: { weaponAccuracy: { type: 'absolute', value: 8 } },
+    7: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    8: { attackSpeed: { type: 'percent', value: -10 } },
+    9: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    10: { energyCost: { type: 'percent', value: -5 } },
+    12: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    13: { dodge: { type: 'percent', value: 3 } },
+    14: { critDamage: { type: 'percent', value: 15 } },
+    15: { accuracyPenalty: { type: 'percent', value: -50 } },
+    16: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    18: { attackSpeed: { type: 'percent', value: -10 } },
+    19: { dodge: { type: 'percent', value: 3 } },
+    20: { critChance: { type: 'percent', value: 5 } },
+    21: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    22: { damage: { type: 'percent', value: 3 } },
+    23: { critChance: { type: 'percent', value: 10 } },
+    24: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    25: { armor: { type: 'percent', value: 3 } },
+    26: { attackSpeed: { type: 'percent', value: 5 }, damage: { type: 'percent', value: 5 }, armor: { type: 'percent', value: 5 } },
+    27: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    28: { critDamage: { type: 'percent', value: 15 } },
+    101: { energy: { type: 'absolute', value: 10 } },
+    102: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    103: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    104: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    105: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    106: { cooldown: { type: 'percent', value: -5 } },
+    108: { shield: { type: 'absolute', value: 2 } },
+    109: { weaponAccuracy: { type: 'absolute', value: 8 } },
+    110: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    111: { damageBonus: { type: 'percent', value: 10 } },
+    112: { shield: { type: 'absolute', value: 2 } },
+    114: { damage: { type: 'percent', value: 3 } },
+    115: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    116: { cooldownReduction: { type: 'percent', value: -40 } },
+    117: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    118: { critChance: { type: 'percent', value: 3 }, weaponSpray: { type: 'percent', value: -3 } },
+    119: { damage: { type: 'percent', value: 3 } },
+    120: { dodge: { type: 'absolute', value: 5 }, energy: { type: 'percent', value: 5 }, critChance: { type: 'percent', value: 5 } },
+    201: { armor: { type: 'percent', value: 3 } },
+    202: { health: { type: 'absolute', value: 80 } },
+    203: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    204: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    205: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    207: { armor: { type: 'percent', value: 3 } },
+    208: { energyCost: { type: 'percent', value: -5 } },
+    209: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    210: { energy: { type: 'absolute', value: 6 }, cooldown: { type: 'percent', value: -2 } },
+    211: { cooldown: { type: 'percent', value: -5 } },
+    212: { shield: { type: 'percent', value: 5 }, health: { type: 'percent', value: 5 }, energyCost: { type: 'percent', value: -5 } },
+    213: { damageBonus: { type: 'percent', value: 20 } },
+    214: { attackSpeed: { type: 'percent', value: -10 } },
+    215: { armor: { type: 'percent', value: 3 } },
+    216: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } },
+    218: { damageBonus: { type: 'percent', value: 10 } },
+    219: { damage: { type: 'percent', value: 3 } },
+    220: { armor: { type: 'percent', value: 3 } },
+    221: { health: { type: 'absolute', value: 90 }, weight: { type: 'absolute', value: 3 } }
+};
+
+
+function calculateStats() {
     const baseHealth = parseFloat(document.getElementById('baseHealth').value) || 0;
     const baseDodge = parseFloat(document.getElementById('baseDodge').value) || 0;
-    const baseDefense = parseFloat(document.getElementById('baseDefense').value) || 0;
+    const baseArmor = parseFloat(document.getElementById('baseArmor').value) || 0;
+    const baseShield = parseFloat(document.getElementById('baseShield').value) || 0;
+    const baseWeight = parseFloat(document.getElementById('baseWeight').value) || 0;
+    const baseEnergy = parseFloat(document.getElementById('baseEnergy').value) || 0;
     const baseDamage = parseFloat(document.getElementById('baseDamage').value) || 0;
+    const baseAttackSpeed = parseFloat(document.getElementById('baseAttackSpeed').value) || 0;
+    const baseWeaponAccuracy = parseFloat(document.getElementById('baseWeaponAccuracy').value) || 0;
+    const baseCritChance = parseFloat(document.getElementById('baseCritChance').value) || 0;
+    const baseCritDamage = parseFloat(document.getElementById('baseCritDamage').value) || 0;
 
-    // Суммируем бонусы из активных узлов без видео
-    let bonusHealthAbs = 0, bonusHealthPerc = 0;
-    let bonusDodgeAbs = 0, bonusDodgePerc = 0;
-    let bonusDefensePerc = 0;
-    let bonusDamagePerc = 0;
+    let totalHealth = baseHealth;
+    let totalDodge = baseDodge;
+    let totalArmor = baseArmor;
+    let totalShield = baseShield;
+    let totalWeight = baseWeight;
+    let totalEnergy = baseEnergy;
+    let totalDamage = baseDamage;
+    let totalAttackSpeed = baseAttackSpeed;
+    let totalWeaponAccuracy = baseWeaponAccuracy;
+    let totalCritChance = baseCritChance;
+    let totalCritDamage = baseCritDamage;
 
-    nodes.filter(n => n.active && !n.video).forEach(node => {
-        const desc = node.description.toLowerCase();
-        // Health: +90, +80, +5%
-        if (desc.includes('increases health by +')) {
-            const match = desc.match(/increases health by \+(\d+)(%)?/);
-            if (match) {
-                if (match[2] === '%') bonusHealthPerc += parseFloat(match[1]);
-                else bonusHealthAbs += parseFloat(match[1]);
-            }
-        } else if (desc.includes('increases maximum health +')) {
-            const match = desc.match(/increases maximum health \+(\d+)/);
-            if (match) bonusHealthAbs += parseFloat(match[1]);
-        }
-        // Dodge: +3%, +5, +5%
-        if (desc.includes('increases dodge chance')) {
-            const match = desc.match(/increases dodge chance \+(\d+)(%)?/);
-            if (match) {
-                if (match[2] === '%') bonusDodgePerc += parseFloat(match[1]);
-                else bonusDodgeAbs += parseFloat(match[1]);
-            }
-        }
-        // Defense: +3%, +5%
-        if (desc.includes('increases armor')) {
-            const match = desc.match(/increases armor \+(\d+)%/);
-            if (match) bonusDefensePerc += parseFloat(match[1]);
-        }
-        // Damage: +3%, +5%, +10%
-        if (desc.includes('increases physical damage dealt')) {
-            const match = desc.match(/increases physical damage dealt \+(\d+)%/);
-            if (match) bonusDamagePerc += parseFloat(match[1]);
-        } else if (desc.includes('deal 10% more physical damage')) {
-            bonusDamagePerc += 10;
-        } else if (desc.includes('gain +10% damage when energy is full')) {
-            bonusDamagePerc += 10; // Условный, но суммируем как процент
+    // Суммируем бонусы от активных пассивных талантов
+    nodes.forEach(node => {
+        if (node.active && !node.video && bonuses[node.id]) {
+            const bonus = bonuses[node.id];
+            Object.keys(bonus).forEach(key => {
+                const { type, value } = bonus[key];
+                if (key === 'health') {
+                    totalHealth += type === 'percent' ? baseHealth * value / 100 : value;
+                } else if (key === 'dodge') {
+                    totalDodge += type === 'percent' ? baseDodge * value / 100 : value;
+                } else if (key === 'armor') {
+                    totalArmor += type === 'percent' ? baseArmor * value / 100 : value;
+                } else if (key === 'shield') {
+                    totalShield += type === 'percent' ? baseShield * value / 100 : value;
+                } else if (key === 'weight') {
+                    totalWeight += type === 'percent' ? baseWeight * value / 100 : value;
+                } else if (key === 'energy') {
+                    totalEnergy += type === 'percent' ? baseEnergy * value / 100 : value;
+                } else if (key === 'damage') {
+                    totalDamage += type === 'percent' ? baseDamage * value / 100 : value;
+                } else if (key === 'attackSpeed') {
+                    totalAttackSpeed += type === 'percent' ? baseAttackSpeed * value / 100 : value;
+                } else if (key === 'weaponAccuracy') {
+                    totalWeaponAccuracy += type === 'percent' ? baseWeaponAccuracy * value / 100 : value;
+                } else if (key === 'critChance') {
+                    totalCritChance += value;  // Бонусы к криту уже процентные, суммируем напрямую
+                } else if (key === 'critDamage') {
+                    totalCritDamage += type === 'percent' ? totalDamage * value / 100 : value; 
+                }
+                // Игнорируем weaponSpray и т.д.
+            });
         }
     });
 
-    // Рассчитываем итоговые значения
-    const totalHealth = baseHealth + bonusHealthAbs + (baseHealth * bonusHealthPerc / 100);
-    const totalDodge = baseDodge + bonusDodgeAbs + (baseDodge * bonusDodgePerc / 100);
-    const totalDefense = baseDefense + (baseDefense * bonusDefensePerc / 100);
-    const totalDamage = baseDamage + (baseDamage * bonusDamagePerc / 100);
-
-    // Обновляем итоговые поля
-    document.getElementById('totalHealth').value = totalHealth.toFixed(1);
-    document.getElementById('totalDodge').value = totalDodge.toFixed(1);
-    document.getElementById('totalDefense').value = totalDefense.toFixed(1);
-    document.getElementById('totalDamage').value = totalDamage.toFixed(1);
+	totalCritDamage += totalDamage;
+	
+    // Обновляем отображение
+    document.getElementById('finalHealth').textContent = totalHealth.toFixed(0);
+    document.getElementById('finalDodge').textContent = totalDodge.toFixed(1);
+    document.getElementById('finalArmor').textContent = totalArmor.toFixed(1);
+    document.getElementById('finalShield').textContent = totalShield.toFixed(0);
+    document.getElementById('finalWeight').textContent = totalWeight.toFixed(0);
+    document.getElementById('finalEnergy').textContent = totalEnergy.toFixed(0);
+    document.getElementById('finalDamage').textContent = totalDamage.toFixed(1);
+    document.getElementById('finalAttackSpeed').textContent = totalAttackSpeed.toFixed(2);
+    document.getElementById('finalWeaponAccuracy').textContent = totalWeaponAccuracy.toFixed(1);
+    document.getElementById('finalCritChance').textContent = totalCritChance.toFixed(1);
+    document.getElementById('finalCritDamage').textContent = totalCritDamage.toFixed(0);
 }
 
-// Добавляем слушатели на базовые input'ы для пересчета
-document.getElementById('baseHealth').addEventListener('input', updateStatCalculator);
-document.getElementById('baseDodge').addEventListener('input', updateStatCalculator);
-document.getElementById('baseDefense').addEventListener('input', updateStatCalculator);
-document.getElementById('baseDamage').addEventListener('input', updateStatCalculator);
 
-// Инициализация калькулятора при загрузке
-updateStatCalculator();
+
+document.getElementById('calculateBtn').addEventListener('click', calculateStats);
