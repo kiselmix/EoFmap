@@ -163,6 +163,15 @@
 		tooltipAnchor: [16, -28],
 	});
 	
+	var Heal = L.icon({
+		iconUrl:       'icons/Heal.png',
+		iconRetinaUrl: 'icons/Heal.png',
+		iconSize:    [32, 44],
+		iconAnchor:  [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
 		
 	var el_Boss1 = L.marker([74.116047, -98.789063], {icon: Boss}).bindPopup('<b>Random Boss:<br>Juggernaut / Scorpion Monarch</b>');
 	
@@ -219,6 +228,17 @@
 		el_Bridge4 = L.marker([-59.400365, 25.839844], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
 		el_Bridge5 = L.marker([-38.754083, 80.15625], {icon: Bridge}).bindPopup('<b>Appears randomly</b>'),
 		el_Bridge6 = L.marker([-31.203405, 104.414063], {icon: Bridge}).bindPopup('<b>Appears randomly</b>');
+		
+		
+	var el_Heal1 = L.marker([35.317366, 79.013672], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal2 = L.marker([36.244273, -54.052734], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal3 = L.marker([66.018018, -89.824219], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal4 = L.marker([24.846565, 103.974609], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal5 = L.marker([-11.781325, 77.519531], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal6 = L.marker([-7.623887, 48.076172], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal7 = L.marker([55.973798, -35.244141], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal8 = L.marker([68.073305, 20.214844], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>'),
+		el_Heal9 = L.marker([0.703107, 5.449219], {icon: Heal}).bindPopup('<b>Items for creating med kits.<br>Appears randomly</b>');
 	
 	
 	var el_Exit1 = L.marker([-63.509375, 66.708984], {icon: ExitOff}),
@@ -281,6 +301,8 @@
 	el_Council_caches49,el_Council_caches50,]).addTo(map);
 	var mg_Bridge_all = L.layerGroup([el_Bridge1,el_Bridge2,el_Bridge3,el_Bridge4,el_Bridge5,el_Bridge6]).addTo(map);
 	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
+	var mg_Heal_all = L.layerGroup([el_Heal1,el_Heal2,el_Heal3,el_Heal4,el_Heal5,el_Heal6,el_Heal7,el_Heal8,el_Heal9]).addTo(map);
+	
 	
 	
 	var overlays={ 
@@ -288,6 +310,7 @@
 		"<img src='icons/Boss_menu.png' /> Boss" : mg_Boss_all,
 		"<img src='icons/Bridge_menu.png' /> Bridge" : mg_Bridge_all,
 		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
+		"<img src='icons/Heal_menu.png' /> Healing items" : mg_Heal_all,
 		}
 
 	L.control.layers(null, overlays).addTo(map);
