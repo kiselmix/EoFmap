@@ -212,14 +212,15 @@
 		el_Exit24 = L.marker([-15.114553, 22.148438], {icon: ExitOff}),
 		el_Exit25 = L.marker([18.39623, 1.494141], {icon: ExitOff}),
 		el_Exit26 = L.marker([-29.916852, -12.832031], {icon: ExitOff}),
-		el_Exit27 = L.marker([-56.944974, 26.323242], {icon: ExitOff});
+		el_Exit27 = L.marker([-56.944974, 26.323242], {icon: ExitOff}),
+		el_Exit28 = L.marker([-12.039321, -28.476562], {icon: ExitOff});
 		
 	var el_Quest1 = L.marker([61.100789, 4.394531], {icon: Quest}).bindPopup('<b>Quest "New Horizons"<br>Visit the northernmost point. Be careful with the boss.</b>').addTo(map),
 		el_Quest2 = L.marker([-11.609193, -67.631836], {icon: Quest}).bindPopup('<b>Quest "To The Rhythm Of The Beat"<br>Inspect the table with vinyl records</b>').addTo(map),
 		el_Quest3 = L.marker([20.385825, 33.354492], {icon: Quest}).bindPopup('<b>Quest "The Sacred Scrawl"<br>Search the bookcase</b>').addTo(map);
 	
-	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9,el_Exit10,el_Exit11,el_Exit12,el_Exit9,
-	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25,el_Exit26,el_Exit27];
+	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9,el_Exit10,el_Exit11,el_Exit12,
+	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25,el_Exit26,el_Exit27,el_Exit28];
 
 		exitMarkers.forEach(function(marker) {
 		  marker.on('click', function() {
