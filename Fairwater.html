@@ -184,7 +184,8 @@
 		el_Council_caches28 = L.marker([2.943041, -60.864258], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches30 = L.marker([35.065973, 33.837891], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
 		el_Council_caches31 = L.marker([18.271086, -61.435547], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
-		el_Council_caches32 = L.marker([24.367114, -50.273438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+		el_Council_caches32 = L.marker([24.367114, -50.273438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches33 = L.marker([15.326572, -9.272461], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
 		
 	var el_Exit1 = L.marker([-42.455888, 7.119141], {icon: ExitOff}),
 		el_Exit2 = L.marker([-31.203405, 37.045898], {icon: ExitOff}),
@@ -213,14 +214,19 @@
 		el_Exit25 = L.marker([18.39623, 1.494141], {icon: ExitOff}),
 		el_Exit26 = L.marker([-29.916852, -12.832031], {icon: ExitOff}),
 		el_Exit27 = L.marker([-56.944974, 26.323242], {icon: ExitOff}),
-		el_Exit28 = L.marker([-12.039321, -28.476562], {icon: ExitOff});
+		el_Exit28 = L.marker([-12.039321, -28.476562], {icon: ExitOff}),
+		el_Exit29 = L.marker([19.932041, -77.651367], {icon: ExitOff}),
+		el_Exit30 = L.marker([-18.646245, -7.954102], {icon: ExitOff}),
+		el_Exit31 = L.marker([30.297018, -11.953125], {icon: ExitOff}),
+		el_Exit32 = L.marker([10.703792, 35.639648], {icon: ExitOff});
 		
 	var el_Quest1 = L.marker([61.100789, 4.394531], {icon: Quest}).bindPopup('<b>Quest "New Horizons"<br>Visit the northernmost point. Be careful with the boss.</b>').addTo(map),
 		el_Quest2 = L.marker([-11.609193, -67.631836], {icon: Quest}).bindPopup('<b>Quest "To The Rhythm Of The Beat"<br>Inspect the table with vinyl records</b>').addTo(map),
 		el_Quest3 = L.marker([20.385825, 33.354492], {icon: Quest}).bindPopup('<b>Quest "The Sacred Scrawl"<br>Search the bookcase</b>').addTo(map);
 	
 	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9,el_Exit10,el_Exit11,el_Exit12,
-	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25,el_Exit26,el_Exit27,el_Exit28];
+	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25,el_Exit26,el_Exit27,el_Exit28,el_Exit29,
+	el_Exit30,el_Exit31,el_Exit32];
 
 		exitMarkers.forEach(function(marker) {
 		  marker.on('click', function() {
@@ -239,7 +245,7 @@
 	el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,
 	el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,
 	el_Council_caches22,el_Council_caches23,el_Council_caches24,el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,
-	el_Council_caches30,el_Council_caches31,el_Council_caches32]).addTo(map);
+	el_Council_caches30,el_Council_caches31,el_Council_caches32,el_Council_caches33]).addTo(map);
 	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
 	
 	var overlays={ 
