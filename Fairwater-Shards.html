@@ -136,50 +136,55 @@
 		tooltipAnchor: [16, -28],
 	});
 	
+	// Функция для создания контента попапа с адаптивным изображением
+	function createShardPopup(shardNumber) {
+	  return '<b>Randomly one on the map</b><br><img src="./shards/' + shardNumber + '.avif" alt="Shard ' + shardNumber + '" style="max-width: 100%; height: auto;">';
+	}
 	
-	var el_Shard1 = L.marker([-16.509833, -1.40625], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/1.avif" style ="width:300px">');
-		el_Shard2 = L.marker([32.694866, -33.618164], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/2.avif" style ="width:300px">'),
-		el_Shard3 = L.marker([33.870416, -31.289063], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/3.avif" style ="width:300px">'),
-		el_Shard4 = L.marker([14.51978, -8.569336], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/4.avif" style ="width:300px">'),
-		el_Shard5 = L.marker([58.745407, 17.753906], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/5.avif" style ="width:300px">'),
-		el_Shard6 = L.marker([51.124213, -8.481445], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/6.avif" style ="width:300px">');
-		el_Shard7 = L.marker([58.654085, -12.128906], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/7.avif" style ="width:300px">'),
-		el_Shard8 = L.marker([20.385825, 14.545898], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/8.avif" style ="width:300px">'),
-		el_Shard9 = L.marker([23.241346, -61.962891], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/9.avif" style ="width:300px">'),
-		el_Shard10 = L.marker([23.84565, -60.380859], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/10.avif" style ="width:300px">'),
-		el_Shard11 = L.marker([-12.768946, -2.768555], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/11.avif" style ="width:300px">'),
-		el_Shard12 = L.marker([1.186439, -43.066406], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/12.avif" style ="width:300px">'),
-		el_Shard13 = L.marker([-19.062118, 10.371094], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/13.avif" style ="width:300px">'),
-		el_Shard14 = L.marker([11.910354, -58.007813], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/14.avif" style ="width:300px">'),
-		el_Shard15 = L.marker([8.624472, -54.448242], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/15.avif" style ="width:300px">'),
-		el_Shard16 = L.marker([14.774883, -70.3125], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/16.avif" style ="width:300px">'),
-		el_Shard17 = L.marker([24.046464, -64.116211], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/17.avif" style ="width:300px">'),
-		el_Shard18 = L.marker([-1.054628, -17.666016], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/18.avif" style ="width:300px">'),
-		el_Shard19 = L.marker([56.752723, -15.117188], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/19.avif" style ="width:300px">'),
-		el_Shard20 = L.marker([47.842658, -37.133789], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/20.avif" style ="width:300px">'),
-		el_Shard21 = L.marker([-14.85985, 11.99707], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/21.avif" style ="width:300px">'),
-		el_Shard22 = L.marker([47.368594, 1.933594], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/22.avif" style ="width:300px">'),
-		el_Shard23 = L.marker([-14.98724, 16.479492], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/23.avif" style ="width:300px">'),
-		el_Shard24 = L.marker([-16.256867, -3.691406], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/24.avif" style ="width:300px">'),
-		el_Shard25 = L.marker([10.228437, -4.438477], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/25.avif" style ="width:300px">'),
-		el_Shard26 = L.marker([49.639177, 1.845703], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/26.avif" style ="width:300px">'),
-		el_Shard27 = L.marker([51.862924, 34.057617], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/27.avif" style ="width:300px">'),
-		el_Shard28 = L.marker([44.621754, 46.40625], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/28.avif" style ="width:300px">'),
-		el_Shard29 = L.marker([55.72711, -21.09375], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/29.avif" style ="width:300px">'),
-		el_Shard30 = L.marker([53.67068, 23.90625], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/30.avif" style ="width:300px">'),
-		el_Shard31 = L.marker([49.382373, -41.967773], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/31.avif" style ="width:300px">'),
-		el_Shard32 = L.marker([-11.523088, -30.410156], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/32.avif" style ="width:300px">'),
-		el_Shard33 = L.marker([50.597186, 50.756836], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/33.avif" style ="width:300px">'),
-		el_Shard34 = L.marker([-2.196727, -25.092773], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/34.avif" style ="width:300px">'),
-		el_Shard35 = L.marker([4.740675, -44.780273], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/35.avif" style ="width:300px">'),
-		el_Shard36 = L.marker([-4.696879, -14.106445], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/36.avif" style ="width:300px">'),
-		el_Shard37 = L.marker([48.283193, 51.899414], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/37.avif" style ="width:300px">'),
-		el_Shard38 = L.marker([9.622414, -70.180664], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/38.avif" style ="width:300px">'),
-		el_Shard39 = L.marker([-15.029686, 1.142578], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/39.avif" style ="width:300px">'),
-		el_Shard40 = L.marker([35.209722, 30.9375], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/40.avif" style ="width:300px">'),
-		el_Shard41 = L.marker([27.176469, 23.378906], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/41.avif" style ="width:300px">'),
-		el_Shard42 = L.marker([31.16581, 28.476563], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/42.avif" style ="width:300px">'),
-		el_Shard43 = L.marker([58.927334, 3.779297], {icon: Shard}).bindPopup('<b>Randomly one on the map</b><img src = "./shards/43.avif" style ="width:300px">');
+	
+	var el_Shard1 = L.marker([-16.509833, -1.40625], {icon: Shard}).bindPopup(createShardPopup(1), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard2 = L.marker([32.694866, -33.618164], {icon: Shard}).bindPopup(createShardPopup(2), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard3 = L.marker([33.870416, -31.289063], {icon: Shard}).bindPopup(createShardPopup(3), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard4 = L.marker([14.51978, -8.569336], {icon: Shard}).bindPopup(createShardPopup(4), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard5 = L.marker([58.745407, 17.753906], {icon: Shard}).bindPopup(createShardPopup(5), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard6 = L.marker([51.124213, -8.481445], {icon: Shard}).bindPopup(createShardPopup(6), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard7 = L.marker([58.654085, -12.128906], {icon: Shard}).bindPopup(createShardPopup(7), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard8 = L.marker([20.385825, 14.545898], {icon: Shard}).bindPopup(createShardPopup(8), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard9 = L.marker([23.241346, -61.962891], {icon: Shard}).bindPopup(createShardPopup(9), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard10 = L.marker([23.84565, -60.380859], {icon: Shard}).bindPopup(createShardPopup(10), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard11 = L.marker([-12.768946, -2.768555], {icon: Shard}).bindPopup(createShardPopup(11), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard12 = L.marker([1.186439, -43.066406], {icon: Shard}).bindPopup(createShardPopup(12), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard13 = L.marker([-19.062118, 10.371094], {icon: Shard}).bindPopup(createShardPopup(13), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard14 = L.marker([11.910354, -58.007813], {icon: Shard}).bindPopup(createShardPopup(14), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard15 = L.marker([8.624472, -54.448242], {icon: Shard}).bindPopup(createShardPopup(15), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard16 = L.marker([14.774883, -70.3125], {icon: Shard}).bindPopup(createShardPopup(16), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard17 = L.marker([24.046464, -64.116211], {icon: Shard}).bindPopup(createShardPopup(17), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard18 = L.marker([-1.054628, -17.666016], {icon: Shard}).bindPopup(createShardPopup(18), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard19 = L.marker([56.752723, -15.117188], {icon: Shard}).bindPopup(createShardPopup(19), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard20 = L.marker([47.842658, -37.133789], {icon: Shard}).bindPopup(createShardPopup(20), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard21 = L.marker([-14.85985, 11.99707], {icon: Shard}).bindPopup(createShardPopup(21), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard22 = L.marker([47.368594, 1.933594], {icon: Shard}).bindPopup(createShardPopup(22), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard23 = L.marker([-14.98724, 16.479492], {icon: Shard}).bindPopup(createShardPopup(23), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard24 = L.marker([-16.256867, -3.691406], {icon: Shard}).bindPopup(createShardPopup(24), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard25 = L.marker([10.228437, -4.438477], {icon: Shard}).bindPopup(createShardPopup(25), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard26 = L.marker([49.639177, 1.845703], {icon: Shard}).bindPopup(createShardPopup(26), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard27 = L.marker([51.862924, 34.057617], {icon: Shard}).bindPopup(createShardPopup(27), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard28 = L.marker([44.621754, 46.40625], {icon: Shard}).bindPopup(createShardPopup(28), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard29 = L.marker([55.72711, -21.09375], {icon: Shard}).bindPopup(createShardPopup(29), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard30 = L.marker([53.67068, 23.90625], {icon: Shard}).bindPopup(createShardPopup(30), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard31 = L.marker([49.382373, -41.967773], {icon: Shard}).bindPopup(createShardPopup(31), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard32 = L.marker([-11.523088, -30.410156], {icon: Shard}).bindPopup(createShardPopup(32), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard33 = L.marker([50.597186, 50.756836], {icon: Shard}).bindPopup(createShardPopup(33), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard34 = L.marker([-2.196727, -25.092773], {icon: Shard}).bindPopup(createShardPopup(34), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard35 = L.marker([4.740675, -44.780273], {icon: Shard}).bindPopup(createShardPopup(35), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard36 = L.marker([-4.696879, -14.106445], {icon: Shard}).bindPopup(createShardPopup(36), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard37 = L.marker([48.283193, 51.899414], {icon: Shard}).bindPopup(createShardPopup(37), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard38 = L.marker([9.622414, -70.180664], {icon: Shard}).bindPopup(createShardPopup(38), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard39 = L.marker([-15.029686, 1.142578], {icon: Shard}).bindPopup(createShardPopup(39), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard40 = L.marker([35.209722, 30.9375], {icon: Shard}).bindPopup(createShardPopup(40), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard41 = L.marker([27.176469, 23.378906], {icon: Shard}).bindPopup(createShardPopup(41), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard42 = L.marker([31.16581, 28.476563], {icon: Shard}).bindPopup(createShardPopup(42), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard43 = L.marker([58.927334, 3.779297], {icon: Shard}).bindPopup(createShardPopup(43), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
 	
 		
 	var el_Exit1 = L.marker([-42.455888, 7.119141], {icon: ExitOff}),
