@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html = style="height: 100%;">
+  <head>
+    <title>Engines of Fury Interactive Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scripts/leaflet.css">
+	 <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+	  <link href="carousel.css" rel="stylesheet">
+	  <link type="image/x-icon" rel="shortcut icon" href="icons/favicon.ico">
+	   <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <script src="scripts/leaflet.js"></script>
+	<script src="scripts/random.js"></script>
+	<script type="text/javascript" src="scripts/markers.js"></script>
+	<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(96989374, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96989374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	
+  </head>
+  
+  <body style="height: 100%;margin: 0;">
+  
+	<nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-sm-start fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto" href="https://enginesoffury.fun/"
+          >Engines of Fury</a
+        >
+        <button class="navbar-toggler align-self-start" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse bg-dark p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav align-self-stretch">
+
+		  
+            <li class="nav-item active">
+              <a class="nav-link" href="./Cliffside"
+                >Cliffside</a
+              >
+            </li>
+			
+			<li class="nav-item active">
+              <a class="nav-link" href="./Fairwater"
+                >Fairwater</a
+              >
+            </li>
+			
+			<li class="nav-item active">
+              <a class="nav-link" href="./Recycling"
+                >Recycling</a
+              >
+            </li>
+
+			  <li class="nav-item active">
+              <a class="nav-link" href="./Quests"
+                >Quests</a
+              >
+            </li>
+
+			  <li class="nav-item active">
+              <a class="nav-link" href="./Skill-Tree"
+                >Skill Tree</a
+              >
+            </li>
+			
+			<li class="nav-item active">
+              <a style="color: #FF9900" target="_blank" class="nav-link" href="https://tokentrove.com/collection/EnginesofFuryFactionsShardsandLockboxes"
+                >Sell/Buy Shard</a
+              >
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  
+    <div id="map" style="width: 100%; height: 100%; background: #161616;"></div>
+    <script type="text/javascript">
+    var map = L.map('map').setView([0, 0], 0);
+    L.tileLayer('Cliffsidemap/{z}/{x}/{y}.png', {
+      continuousWorld: false,
+      noWrap: true,  
+      minZoom: 2,
+      maxZoom: 4,
+    }).addTo(map);
+	    
+	
+	var Shard = L.icon({
+		iconUrl:       'icons/Shard.png',
+		iconRetinaUrl: 'icons/Shard.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	var ExitOn = L.icon({
+		iconUrl:       'icons/exit_on.png',
+		iconRetinaUrl: 'icons/exit_on.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	
+	var ExitOff = L.icon({
+		iconUrl:       'icons/exit_off.png',
+		iconRetinaUrl: 'icons/exit_off.png',
+		iconSize:    [30, 30],
+		iconAnchor:  [20, 25],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	function createShardPopup(shardNumber) {
+	  return '<b>Randomly one on the map</b><br><img src="./shards/Cliffside/' + shardNumber + '.avif" alt="Shard ' + shardNumber + '" style="max-width: 100%; height: auto;">';
+	}
+	
+	
+	
+	var el_Shard1 = L.marker([76.226907, -42.714844], {icon: Shard}).bindPopup(createShardPopup(1), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard2 = L.marker([53.852527, -49.921875], {icon: Shard}).bindPopup(createShardPopup(2), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard3 = L.marker([68.138852, -52.03125], {icon: Shard}).bindPopup(createShardPopup(3), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard4 = L.marker([3.864255, 103.183594], {icon: Shard}).bindPopup(createShardPopup(4), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard5 = L.marker([52.802761, 83.320313], {icon: Shard}).bindPopup(createShardPopup(5), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard6 = L.marker([58.170702, -36.210938], {icon: Shard}).bindPopup(createShardPopup(6), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard7 = L.marker([75.584937, -93.164063], {icon: Shard}).bindPopup(createShardPopup(7), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard8 = L.marker([69.037142, -78.222656], {icon: Shard}).bindPopup(createShardPopup(8), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard9 = L.marker([76.016094, -35.683594], {icon: Shard}).bindPopup(createShardPopup(9), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard10 = L.marker([63.860036, 20.742188], {icon: Shard}).bindPopup(createShardPopup(10), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard11 = L.marker([76.184995, -43.59375], {icon: Shard}).bindPopup(createShardPopup(11), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard12 = L.marker([22.917923, -42.539062], {icon: Shard}).bindPopup(createShardPopup(12), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard13 = L.marker([-9.622414, 77.519531], {icon: Shard}).bindPopup(createShardPopup(13), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard14 = L.marker([77.655346, -68.027344], {icon: Shard}).bindPopup(createShardPopup(14), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard15 = L.marker([76.393312, -33.574219], {icon: Shard}).bindPopup(createShardPopup(15), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard16 = L.marker([74.867889, -84.726563], {icon: Shard}).bindPopup(createShardPopup(16), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard17 = L.marker([71.187754, 31.640625], {icon: Shard}).bindPopup(createShardPopup(17), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard18 = L.marker([48.806863, 101.777344], {icon: Shard}).bindPopup(createShardPopup(18), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	el_Shard19 = L.marker([63.391522, -78.046875], {icon: Shard}).bindPopup(createShardPopup(19), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
+	
+	
+	var el_Exit1 = L.marker([-63.509375, 66.708984], {icon: ExitOff}),
+		el_Exit2 = L.marker([-17.224758, 48.955078], {icon: ExitOff}),
+		el_Exit3 = L.marker([40.111689, 48.339844], {icon: ExitOff}),
+		el_Exit4 = L.marker([-44.21371, 113.90625], {icon: ExitOff}),
+		el_Exit5 = L.marker([-37.71859, 104.326172], {icon: ExitOff}),
+		el_Exit6 = L.marker([-11.350797, 82.177734], {icon: ExitOff}),
+		el_Exit7 = L.marker([49.267805, 81.386719], {icon: ExitOff}),
+		el_Exit8 = L.marker([59.800634, 64.248047], {icon: ExitOff}),
+		el_Exit9 = L.marker([9.275622, -93.779297], {icon: ExitOff}),
+		el_Exit10 = L.marker([-67.776025, -21.357422], {icon: ExitOff}),
+		el_Exit11 = L.marker([28.921631, 77.080078], {icon: ExitOff}),
+		el_Exit12 = L.marker([70.844673, -19.863281], {icon: ExitOff}),
+		el_Exit13 = L.marker([61.856149, -24.433594], {icon: ExitOff}),
+		el_Exit14 = L.marker([-67.373698, -64.951172], {icon: ExitOff}),
+		el_Exit15 = L.marker([-73.252045, 106.787109], {icon: ExitOff}),
+		el_Exit16 = L.marker([-24.766785, 12.304688], {icon: ExitOff}),
+		el_Exit17 = L.marker([-69.131271, -2.988281], {icon: ExitOff}),
+		el_Exit18 = L.marker([6.577303, 58.447266], {icon: ExitOff}),
+		el_Exit19 = L.marker([-73.971078, -47.8125], {icon: ExitOff}),
+		el_Exit20 = L.marker([-66.089364, -44.121094], {icon: ExitOff}),
+		el_Exit21 = L.marker([-35.746512, -28.476562], {icon: ExitOff}),
+		el_Exit22 = L.marker([6.577303, 79.716797], {icon: ExitOff}),
+		el_Exit23 = L.marker([-70.757966, -14.677734], {icon: ExitOff}),
+		el_Exit24 = L.marker([-72.100944, 85.341797], {icon: ExitOff}),
+		el_Exit25 = L.marker([63.154355, -71.367188], {icon: ExitOff}),
+		el_Exit26 = L.marker([-1.230374, -13.359375], {icon: ExitOff}),
+		el_Exit27 = L.marker([36.456636, -53.964844], {icon: ExitOff}),
+		el_Exit28 = L.marker([42.682435, -30.058594], {icon: ExitOff}),
+		el_Exit29 = L.marker([6.664608, -85.078125], {icon: ExitOff}),
+		el_Exit30 = L.marker([42.682435, -107.402344], {icon: ExitOff}),
+		el_Exit31 = L.marker([1.757537, 37.96875], {icon: ExitOff}),
+		el_Exit32 = L.marker([63.233627, 49.570313], {icon: ExitOff});
+		
+	
+	var mg_Shard_all = L.layerGroup([el_Shard1,el_Shard2,el_Shard3,el_Shard4,el_Shard5,el_Shard6,el_Shard7,el_Shard8,el_Shard9,
+	el_Shard10,el_Shard11,el_Shard12,el_Shard13,el_Shard14,el_Shard15,el_Shard16,el_Shard17,el_Shard18,el_Shard19]).addTo(map);
+		
+	
+	
+	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9, el_Exit10,el_Exit11, el_Exit12, 
+	el_Exit13, el_Exit14, el_Exit15, el_Exit16, el_Exit17, el_Exit18, el_Exit19, el_Exit20,el_Exit21, el_Exit22, el_Exit23, el_Exit24, el_Exit25,
+	el_Exit26,el_Exit27,el_Exit28,el_Exit29,el_Exit30,el_Exit31,el_Exit32];
+
+		exitMarkers.forEach(function(marker) {
+		  marker.on('click', function() {
+			if (marker.options.icon === ExitOff) {
+			  marker.setIcon(ExitOn);
+			} else {
+			  marker.setIcon(ExitOff);
+			}
+		  });
+		});
+	
+	
+	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2]).addTo(map);
+	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
+	
+	
+	
+	var overlays={ 
+		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
+		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
+		}
+
+	L.control.layers(null, overlays).addTo(map);
+
+	
+	</script>
+	<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+      integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04="
+      crossorigin="anonymous"
+    ></script>
+	<script src="./js/script.js"></script>
+  </body>
+</html>
+
+
+
+
+
