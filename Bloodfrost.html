@@ -104,14 +104,32 @@
    <div id="map" style="width: 100%; height: 100%; background: #161616;"></div>
     <script type="text/javascript">
     var map = L.map('map').setView([0, 0], 0);
-    L.tileLayer('Fairwater/{z}/{x}/{y}.png', {
+    L.tileLayer('Bloodfrost/{z}/{x}/{y}.png', {
       continuousWorld: false,
       noWrap: true,  
       minZoom: 3,
       maxZoom: 5,
     }).addTo(map);
 	    
-
+	
+	var Boss = L.icon({
+		iconUrl:       'icons/Boss2.png',
+		iconRetinaUrl: 'icons/Boss2.png',
+		iconSize:    [60, 60],
+		iconAnchor:  [20, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
+	var Council_caches = L.icon({
+		iconUrl:       'icons/Council_caches.png',
+		iconRetinaUrl: 'icons/Council_caches.png',
+		iconSize:    [50, 40],
+		iconAnchor:  [12, 20],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+	});
+	
 	var ExitOn = L.icon({
 		iconUrl:       'icons/exit_on.png',
 		iconRetinaUrl: 'icons/exit_on.png',
@@ -131,67 +149,49 @@
 		tooltipAnchor: [16, -28],
 	});
 	
-
-	
-	var Shard = L.icon({
-		iconUrl:       'icons/Shard.png',
-		iconRetinaUrl: 'icons/Shard.png',
-		iconSize:    [30, 30],
-		iconAnchor:  [20, 25],
+	var Quest = L.icon({
+		iconUrl:       'icons/Quest.png',
+		iconRetinaUrl: 'icons/Quest.png',
+		iconSize:    [15, 15],
+		iconAnchor:  [5, 10],
 		popupAnchor: [1, -34],
 		tooltipAnchor: [16, -28],
 	});
 	
-	// Функция для создания контента попапа с адаптивным изображением
-	function createShardPopup(shardNumber) {
-	  return '<b>Randomly one on the map</b><br><img src="./shards/' + shardNumber + '.avif" alt="Shard ' + shardNumber + '" style="max-width: 100%; height: auto;">';
-	}
+		
+/*	var el_Boss1 = L.marker([35.424868, -52.998047], {icon: Boss}).bindPopup('<b>Random Boss</b>'),
+		el_Boss2 = L.marker([59.243415, 4.658203], {icon: Boss}).bindPopup('<b>Random Boss</b>');
 	
-	
-	var el_Shard1 = L.marker([-16.509833, -1.40625], {icon: Shard}).bindPopup(createShardPopup(1), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard2 = L.marker([32.694866, -33.618164], {icon: Shard}).bindPopup(createShardPopup(2), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard3 = L.marker([33.870416, -31.289063], {icon: Shard}).bindPopup(createShardPopup(3), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard4 = L.marker([14.51978, -8.569336], {icon: Shard}).bindPopup(createShardPopup(4), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard5 = L.marker([58.745407, 17.753906], {icon: Shard}).bindPopup(createShardPopup(5), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard6 = L.marker([51.124213, -8.481445], {icon: Shard}).bindPopup(createShardPopup(6), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard7 = L.marker([58.654085, -12.128906], {icon: Shard}).bindPopup(createShardPopup(7), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard8 = L.marker([20.385825, 14.545898], {icon: Shard}).bindPopup(createShardPopup(8), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard9 = L.marker([23.241346, -61.962891], {icon: Shard}).bindPopup(createShardPopup(9), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard10 = L.marker([23.84565, -60.380859], {icon: Shard}).bindPopup(createShardPopup(10), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard11 = L.marker([-12.768946, -2.768555], {icon: Shard}).bindPopup(createShardPopup(11), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard12 = L.marker([1.186439, -43.066406], {icon: Shard}).bindPopup(createShardPopup(12), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard13 = L.marker([-19.062118, 10.371094], {icon: Shard}).bindPopup(createShardPopup(13), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard14 = L.marker([11.910354, -58.007813], {icon: Shard}).bindPopup(createShardPopup(14), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard15 = L.marker([8.624472, -54.448242], {icon: Shard}).bindPopup(createShardPopup(15), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard16 = L.marker([14.774883, -70.3125], {icon: Shard}).bindPopup(createShardPopup(16), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard17 = L.marker([24.046464, -64.116211], {icon: Shard}).bindPopup(createShardPopup(17), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard18 = L.marker([-1.054628, -17.666016], {icon: Shard}).bindPopup(createShardPopup(18), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard19 = L.marker([56.752723, -15.117188], {icon: Shard}).bindPopup(createShardPopup(19), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard20 = L.marker([47.842658, -37.133789], {icon: Shard}).bindPopup(createShardPopup(20), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard21 = L.marker([-14.85985, 11.99707], {icon: Shard}).bindPopup(createShardPopup(21), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard22 = L.marker([47.368594, 1.933594], {icon: Shard}).bindPopup(createShardPopup(22), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard23 = L.marker([-14.98724, 16.479492], {icon: Shard}).bindPopup(createShardPopup(23), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard24 = L.marker([-16.256867, -3.691406], {icon: Shard}).bindPopup(createShardPopup(24), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard25 = L.marker([10.228437, -4.438477], {icon: Shard}).bindPopup(createShardPopup(25), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard26 = L.marker([49.639177, 1.845703], {icon: Shard}).bindPopup(createShardPopup(26), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard27 = L.marker([51.862924, 34.057617], {icon: Shard}).bindPopup(createShardPopup(27), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard28 = L.marker([44.621754, 46.40625], {icon: Shard}).bindPopup(createShardPopup(28), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard29 = L.marker([55.72711, -21.09375], {icon: Shard}).bindPopup(createShardPopup(29), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard30 = L.marker([53.67068, 23.90625], {icon: Shard}).bindPopup(createShardPopup(30), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard31 = L.marker([49.382373, -41.967773], {icon: Shard}).bindPopup(createShardPopup(31), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard32 = L.marker([-11.523088, -30.410156], {icon: Shard}).bindPopup(createShardPopup(32), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard33 = L.marker([50.597186, 50.756836], {icon: Shard}).bindPopup(createShardPopup(33), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard34 = L.marker([-2.196727, -25.092773], {icon: Shard}).bindPopup(createShardPopup(34), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard35 = L.marker([4.740675, -44.780273], {icon: Shard}).bindPopup(createShardPopup(35), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard36 = L.marker([-4.696879, -14.106445], {icon: Shard}).bindPopup(createShardPopup(36), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard37 = L.marker([48.283193, 51.899414], {icon: Shard}).bindPopup(createShardPopup(37), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard38 = L.marker([9.622414, -70.180664], {icon: Shard}).bindPopup(createShardPopup(38), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard39 = L.marker([-15.029686, 1.142578], {icon: Shard}).bindPopup(createShardPopup(39), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard40 = L.marker([35.209722, 30.9375], {icon: Shard}).bindPopup(createShardPopup(40), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard41 = L.marker([27.176469, 23.378906], {icon: Shard}).bindPopup(createShardPopup(41), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard42 = L.marker([31.16581, 28.476563], {icon: Shard}).bindPopup(createShardPopup(42), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	el_Shard43 = L.marker([58.927334, 3.779297], {icon: Shard}).bindPopup(createShardPopup(43), {maxWidth: null, minWidth: 500, maxHeight: 400, autoPan: true});
-	
+	var el_Council_caches1 = L.marker([-18.104087, 10.942383], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches2 = L.marker([-15.496032, -2.373047], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches3 = L.marker([-3.030812, -14.72168], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches4 = L.marker([-8.885072, -31.420898], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches5 = L.marker([4.127285, -45.703125], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches6 = L.marker([31.578535, -42.1875], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
+		el_Council_caches7 = L.marker([28.960089, -26.455078], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches9 = L.marker([51.096623, -39.682617], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches10 = L.marker([56.776808, -37.133789], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches11 = L.marker([56.824933, -9.316406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches13 = L.marker([47.249407, -2.548828], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches14 = L.marker([60.500525, 5.317383], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches15 = L.marker([47.901614, 17.138672], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches16 = L.marker([51.536086, 26.850586], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches17 = L.marker([43.771094, 47.021484], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches18 = L.marker([33.358062, 21.181641], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches19 = L.marker([26.234302, 27.773438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches20 = L.marker([23.80545, 20.566406], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches21 = L.marker([16.762468, 14.106445], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches22 = L.marker([47.398349, 56.469727], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches23 = L.marker([26.588527, -54.580078], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches24 = L.marker([-18.062312, -22.148438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches25 = L.marker([1.318243, -39.155273], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches26 = L.marker([15.623037, -71.586914], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches27 = L.marker([25.165173, -60.952148], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches28 = L.marker([2.943041, -60.864258], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches30 = L.marker([35.065973, 33.837891], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches31 = L.marker([18.271086, -61.435547], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches32 = L.marker([24.367114, -50.273438], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>'),
+		el_Council_caches33 = L.marker([15.326572, -9.272461], {icon: Council_caches}).bindPopup('<b>Appears randomly,<br>inspect the area nearby</b>');
 		
 	var el_Exit1 = L.marker([-42.455888, 7.119141], {icon: ExitOff}),
 		el_Exit2 = L.marker([-31.203405, 37.045898], {icon: ExitOff}),
@@ -228,10 +228,9 @@
 		el_Exit33 = L.marker([13.239945, -53.789063], {icon: ExitOff}),
 		el_Exit34 = L.marker([-54.572062, -17.753906], {icon: ExitOff});
 		
-		
-	var mg_Shard_all = L.layerGroup([el_Shard1,el_Shard2,el_Shard3,el_Shard4,el_Shard5,el_Shard6,el_Shard7,el_Shard8,el_Shard9,el_Shard10,el_Shard11,el_Shard12,el_Shard13,el_Shard14,el_Shard15,el_Shard16,
-	el_Shard17,el_Shard18,el_Shard19,el_Shard20,el_Shard21,el_Shard22,el_Shard23,el_Shard24,el_Shard25,el_Shard26,el_Shard27,el_Shard28,el_Shard29,el_Shard30,
-	el_Shard31,el_Shard32,el_Shard33,el_Shard34,el_Shard35,el_Shard36,el_Shard37,el_Shard38,el_Shard39,el_Shard40,el_Shard41,el_Shard42,el_Shard43]).addTo(map);
+	var el_Quest1 = L.marker([61.100789, 4.394531], {icon: Quest}).bindPopup('<b>Quest "New Horizons"<br>Visit the northernmost point. Be careful with the boss.</b>').addTo(map),
+		el_Quest2 = L.marker([-11.609193, -67.631836], {icon: Quest}).bindPopup('<b>Quest "To The Rhythm Of The Beat"<br>Inspect the table with vinyl records</b>').addTo(map),
+		el_Quest3 = L.marker([20.385825, 33.354492], {icon: Quest}).bindPopup('<b>Quest "The Sacred Scrawl"<br>Search the bookcase</b>').addTo(map);
 	
 	var exitMarkers = [el_Exit1, el_Exit2, el_Exit3, el_Exit4, el_Exit5, el_Exit6, el_Exit7, el_Exit8, el_Exit9,el_Exit10,el_Exit11,el_Exit12,
 	el_Exit13,el_Exit14,el_Exit15,el_Exit16,el_Exit17,el_Exit18,el_Exit19,el_Exit20,el_Exit21,el_Exit22,el_Exit23,el_Exit24,el_Exit25,el_Exit26,el_Exit27,el_Exit28,el_Exit29,
@@ -249,10 +248,17 @@
 	
 	
 	
-	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);
+	var mg_Boss_all = L.layerGroup([el_Boss1,el_Boss2]).addTo(map);
+	var mg_Council_caches_all = L.layerGroup([el_Council_caches1,el_Council_caches2,el_Council_caches3,el_Council_caches4,el_Council_caches5,
+	el_Council_caches6,el_Council_caches7,el_Council_caches9,el_Council_caches10,el_Council_caches11,el_Council_caches13,el_Council_caches14,
+	el_Council_caches15,el_Council_caches16,el_Council_caches17,el_Council_caches18,el_Council_caches19,el_Council_caches20,el_Council_caches21,
+	el_Council_caches22,el_Council_caches23,el_Council_caches24,el_Council_caches25,el_Council_caches26,el_Council_caches27,el_Council_caches28,
+	el_Council_caches30,el_Council_caches31,el_Council_caches32,el_Council_caches33]).addTo(map);
+	var mg_Exit_all = L.layerGroup(exitMarkers).addTo(map);*/
 	
 	var overlays={ 
-		"<img src='icons/Shard_menu.png' /> Shard" : mg_Shard_all,
+		"<img src='icons/Council_caches_menu.png' /> Council caches" : mg_Council_caches_all, 
+		"<img src='icons/Boss2_menu.png' /> Boss" : mg_Boss_all,
 		"<img src='icons/exit_menu.png' /> Exit" : mg_Exit_all,
 		}
 
@@ -272,6 +278,7 @@
 	<script src="./js/script.js"></script>
   </body>
 </html>
+
 
 
 
